@@ -103,18 +103,51 @@ Practice freely in `sandbox/playground.txt` without worrying about breaking anyt
 
 ## 🚀 Getting Started
 
+### ⚠️ Important: This Tutorial Requires Claude Code
+
+**This is not a standalone tutorial!** It's designed to be run with [Claude Code](https://claude.ai/code), an AI-powered coding assistant that provides interactive guidance, real-time feedback, and personalized help as you progress through the missions.
+
+Claude Code will:
+- Guide you through each challenge with contextual hints
+- Answer questions about commands and concepts
+- Provide immediate feedback on your solutions
+- Help debug issues as you practice
+- Adapt explanations to your learning pace
+
+**To use this tutorial:**
+
+1. **Install [Claude Code](https://claude.ai/code)** if you haven't already
+2. **Clone this repository:**
+   ```bash
+   git clone https://github.com/kiwiscanfly/nvim-tmux-tutorial.git
+   cd nvim-tmux-tutorial
+   ```
+3. **Open the tutorial in Claude Code** and ask it to guide you through the missions
+4. **Start with Mission 01** by asking Claude to help you begin
+
 ### Prerequisites
 
+- **Claude Code** installed and running
 - **Neovim 0.9+** installed
 - **Tmux 3.0+** installed
 - **Telescope plugin** configured in Neovim
 - **Neo-tree plugin** configured in Neovim
 - Basic familiarity with opening a terminal
 
-If you don't have Neovim/tmux configured yet, check `sandbox/configs/` for minimal example configurations.
+If you don't have Neovim/tmux configured yet, check `sandbox/configs/` for minimal example configurations or ask Claude Code for setup help.
 
-### Quick Start
+### Quick Start with Claude Code
 
+```bash
+# Clone the repository
+git clone https://github.com/kiwiscanfly/nvim-tmux-tutorial.git
+cd nvim-tmux-tutorial
+
+# Open in Claude Code and ask:
+# "Help me start the Neovim and Tmux tutorial - guide me through Mission 01"
+```
+
+Traditional approach (without Claude Code):
 ```bash
 cd nvim-tmux-tutorial
 nvim README.md  # Read the main overview and command reference
