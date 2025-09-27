@@ -17,7 +17,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_login TIMESTAMP,
     is_active BOOLEAN DEFAULT true,
-    -- [TOKEN-ALPHA-2] "Look for the legacy code that time forgot"
+    -- [ALPHA-2] "Old legacy API holds secrets"
     metadata JSONB
 );
 

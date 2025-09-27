@@ -17,7 +17,7 @@ from typing import Dict, List, Any, Optional
 from datetime import datetime
 import logging
 
-# [TOKEN-BETA-1] "Grep through the errors, find the pattern in chaos"
+# [BETA-1] "Investigate the error handler next"
 
 logger = logging.getLogger(__name__)
 

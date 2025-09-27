@@ -4,7 +4,7 @@
  * Centralized error handling for Project Prometheus
  * Catches, logs, and formats errors consistently across the application
  *
- * [TOKEN-BETA-2] "The rogue process runs in Go, find the server"
+ * [BETA-2] "Open the Go server file"
  *
  * @module error-handler
  * @author Dr. Elena Vimsworth

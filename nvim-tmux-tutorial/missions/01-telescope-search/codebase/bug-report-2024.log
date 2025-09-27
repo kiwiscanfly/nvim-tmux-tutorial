@@ -17,7 +17,7 @@ The authentication service exhibits unusual memory growth
 when processing concurrent login requests. Memory usage
 increases by ~500MB per hour under load.
 
-[TOKEN-ALPHA-1] "The database remembers everything"
+[ALPHA-1] "Master the database schema next"
 
 Stack trace:
   at AuthService.validateToken (auth-service.js:142)

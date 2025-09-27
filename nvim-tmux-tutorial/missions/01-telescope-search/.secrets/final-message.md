@@ -7,20 +7,16 @@
 ╚═══════════════════════════════════════════════════════════╝
 ```
 
-## [TOKEN-EPSILON-2] "Omega"
-
-## [TOKEN-OMEGA-1] "The"
-
-## [TOKEN-OMEGA-2] "code"
+## [EPSILON-2] "Your final clue awaits here"
 
 ---
 
 If you're reading this, you found all 15 tokens.
 
 **The secret message spells:**
-*"THE DATABASE LOOKS EVEN PYTHON GREP YAML JSON DIVE THE EPSILON OMEGA THE CODE"*
+*"MOTIONS-ARE-KEY"*
 
-Decoded: **"THE CODE IS IN THE MOTIONS"**
+Decoded: **"MOTIONS ARE KEY"**
 
 Dr. Vimsworth wasn't just teaching you Telescope.
 She was preparing you for what comes next.

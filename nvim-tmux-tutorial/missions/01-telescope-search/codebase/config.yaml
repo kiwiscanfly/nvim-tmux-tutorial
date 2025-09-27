@@ -1,5 +1,5 @@
 # PROJECT PROMETHEUS CONFIGURATION
-# [TOKEN-GAMMA-1] "JSON structures hide nested truths"
+# [GAMMA-1] "Search for JSON API responses"
 
 database:
   host: localhost

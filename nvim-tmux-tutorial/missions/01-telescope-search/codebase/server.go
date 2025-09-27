@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// [TOKEN-BETA-3] "YAML holds the keys to configuration secrets"
+// [BETA-3] "Now search for YAML config files"
 
 type Server struct {
 	port        string

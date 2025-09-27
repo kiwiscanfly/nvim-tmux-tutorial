@@ -1,5 +1,5 @@
 // CACHE MANAGER - RUST IMPLEMENTATION
-// [TOKEN-GAMMA-3] "Delve into the depths where logs record all"
+// [GAMMA-3] "Review system logs for errors"
 
 use std::collections::HashMap;
 use std::time::{Duration, SystemTime};

@@ -10,7 +10,7 @@
  * Author: Unknown (probably Jim from the old team)
  * Last touched: 2020-06-15
  * Last security audit: Never
- * [TOKEN-ALPHA-3] "Even Python can't parse her final message"
+ * [ALPHA-3] "Track down the Python parser file"
  */
 
 const express = require('express');

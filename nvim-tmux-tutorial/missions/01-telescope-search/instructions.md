@@ -11,13 +11,13 @@
 
 ## 📋 Background
 
-Dr. Vimsworth's final commit message mentioned "tokens." Your forensic analysis of her workstation revealed she scattered **15 coded tokens** throughout this codebase, each following the pattern `[TOKEN-{SERIES}-{NUMBER}]`.
+Dr. Vimsworth's final commit message mentioned "tokens." Your forensic analysis of her workstation revealed she scattered **13 coded tokens** throughout this codebase, each following the pattern `[{SERIES}-{NUMBER}]`.
 
 Each token contains a hint for finding the next one. Together, they spell out a message.
 
 ## 🎯 Objectives
 
-- [ ] Find all 15 hidden tokens using Telescope
+- [ ] Find all 13 hidden tokens using Telescope
 - [ ] Document token locations in the checklist below
 - [ ] Decode the secret message
 - [ ] Locate the hidden `.secrets` directory
@@ -42,21 +42,19 @@ Each token contains a hint for finding the next one. Together, they spell out a 
 As you find each token, record its location here:
 
 ```
-[TOKEN-ALPHA-1]   Found in: ___________________ (Line: ___)
-[TOKEN-ALPHA-2]   Found in: ___________________ (Line: ___)
-[TOKEN-ALPHA-3]   Found in: ___________________ (Line: ___)
-[TOKEN-BETA-1]    Found in: ___________________ (Line: ___)
-[TOKEN-BETA-2]    Found in: ___________________ (Line: ___)
-[TOKEN-BETA-3]    Found in: ___________________ (Line: ___)
-[TOKEN-GAMMA-1]   Found in: ___________________ (Line: ___)
-[TOKEN-GAMMA-2]   Found in: ___________________ (Line: ___)
-[TOKEN-GAMMA-3]   Found in: ___________________ (Line: ___)
-[TOKEN-DELTA-1]   Found in: ___________________ (Line: ___)
-[TOKEN-DELTA-2]   Found in: ___________________ (Line: ___)
-[TOKEN-EPSILON-1] Found in: ___________________ (Line: ___)
-[TOKEN-EPSILON-2] Found in: ___________________ (Line: ___)
-[TOKEN-OMEGA-1]   Found in: ___________________ (Line: ___)
-[TOKEN-OMEGA-2]   Found in: ___________________ (Line: ___)
+[ALPHA-1]   Found in: ___________________ (Line: ___)
+[ALPHA-2]   Found in: ___________________ (Line: ___)
+[ALPHA-3]   Found in: ___________________ (Line: ___)
+[BETA-1]    Found in: ___________________ (Line: ___)
+[BETA-2]    Found in: ___________________ (Line: ___)
+[BETA-3]    Found in: ___________________ (Line: ___)
+[GAMMA-1]   Found in: ___________________ (Line: ___)
+[GAMMA-2]   Found in: ___________________ (Line: ___)
+[GAMMA-3]   Found in: ___________________ (Line: ___)
+[DELTA-1]   Found in: ___________________ (Line: ___)
+[DELTA-2]   Found in: ___________________ (Line: ___)
+[EPSILON-1] Found in: ___________________ (Line: ___)
+[EPSILON-2] Found in: ___________________ (Line: ___)
 ```
 
 ## 🎮 Walkthrough
@@ -77,15 +75,15 @@ Dr. Vimsworth always started her days reviewing bug reports. Use Telescope to se
 # Type: bug
 ```
 
-Open the bug report file and search for `TOKEN`. (Hint: Use `/TOKEN` in normal mode to search within a file)
+Open the bug report file and read through it carefully. Look for anything that seems out of place or follows a pattern with brackets.
 
 ### Step 3: Follow the Breadcrumbs
 Each token includes a hint like:
 ```
-[TOKEN-ALPHA-1] "The database remembers everything"
+[ALPHA-1] "Master the database schema next"
 ```
 
-This might mean searching for database-related files, or using grep to find the word "database":
+This means you should search for database-related files:
 ```
 <Space>fg
 # Type: database
@@ -104,12 +102,11 @@ This might mean searching for database-related files, or using grep to find the 
 **Search for specific patterns in content:**
 ```
 <Space>fg
-# Try searching for:
-# - TODO
-# - BUG
-# - FIXME
-# - functoin (common typo)
-# - reutrn (another typo)
+# Try searching for patterns like:
+# - ALPHA
+# - BETA
+# - GAMMA
+# Or follow the hints in each token to find the next one
 ```
 
 **Search recently opened files:**
@@ -151,36 +148,25 @@ The `.secrets` directory won't show in Neo-tree by default. Press `H` in Neo-tre
 ## 🏆 Success Criteria
 
 **Bronze (Mission Complete):**
-- Find all 15 tokens
+- Find all 13 tokens
 - Identify the secret message
 
 **Silver (Bonus Challenge):**
-- Find all tokens in under 20 minutes
 - Locate the hidden `.secrets` directory
 - Find all 3 intentional typos in the code
 
 **Gold (Expert Challenge):**
-- Find all tokens in under 10 minutes
 - Discover the easter egg (hint: ASCII art visible only when 2+ files are open side by side)
 - Find the "memory leak" bug mentioned in comments
 
 ## 🔐 Secret Message Decoder
 
-Once you've found all 15 tokens, read the first letter of each hint in order (ALPHA-1, ALPHA-2, ALPHA-3, BETA-1, etc.). They spell out a message.
+Once you've found all 13 tokens, read the first letter of each hint in order (ALPHA-1, ALPHA-2, ALPHA-3, BETA-1, etc.). They spell out a message.
 
 Write it here:
 ```
-__ __ __   __ __ __ __ __ __   __ __   __ __ __   __ __ __ __ __
+M O T I O N S - A R E - K E Y
 ```
-
-## 📊 Metrics
-
-Track your progress:
-- Start time: __________
-- End time: __________
-- Total duration: __________
-- Files opened: __________
-- Grep searches performed: __________
 
 ## ⏭️ Next Steps
 

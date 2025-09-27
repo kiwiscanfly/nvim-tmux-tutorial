@@ -1,5 +1,5 @@
 // AUTHENTICATION SERVICE TESTS
-// [TOKEN-DELTA-2] "Environment variables tell their own story"
+// [DELTA-2] "Key secrets live in .env files"
 
 import { describe, it, expect } from 'vitest';
 import { AuthService } from './auth-service';
