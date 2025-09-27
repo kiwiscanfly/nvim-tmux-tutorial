@@ -143,17 +143,26 @@ If you don't have Neovim/tmux configured yet, check `sandbox/configs/` for minim
 git clone https://github.com/kiwiscanfly/nvim-tmux-tutorial.git
 cd nvim-tmux-tutorial
 
-# Open in Claude Code and ask:
-# "Help me start the Neovim and Tmux tutorial - guide me through Mission 01"
+# Open this directory in Claude Code and say:
+# "I'm ready to begin the investigation"
+#
+# Claude will guide you to:
+# 1. Start a tmux session named "prometheus-investigation"
+# 2. Open nvim-tmux-tutorial/README.md in Neovim
+# 3. Begin your journey through the missions
+#
+# The AI will act as your detective partner throughout!
 ```
 
-Traditional approach (without Claude Code):
+Traditional approach (without Claude Code - not recommended):
 ```bash
 cd nvim-tmux-tutorial
 nvim README.md  # Read the main overview and command reference
 cd missions/01-telescope-search
 nvim instructions.md  # Start Mission 01
 ```
+
+**Note**: Claude Code will stay in character as a detective investigating alongside you. This makes the learning experience much more engaging!
 
 ### Recommended Learning Path
 
