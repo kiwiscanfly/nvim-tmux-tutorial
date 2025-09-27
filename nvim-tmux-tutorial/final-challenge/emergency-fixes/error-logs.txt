@@ -1,0 +1,40 @@
+╔═══════════════════════════════════════════════════════════╗
+║  EMERGENCY DIAGNOSTIC LOG                                 ║
+║  Time: 2024-09-27 10:15:00                                ║
+╚═══════════════════════════════════════════════════════════╝
+
+[SYSTEM ERROR] All three services failed simultaneously
+
+=== WEB APP (Port 3000) ===
+ERROR: Authentication middleware throwing TypeError
+ERROR: Cannot read property 'userId' of undefined
+ERROR: Line 15 in web-app.js
+CLUE: The user object isn't being passed correctly
+
+=== API SERVICE (Port 8080) ===
+ERROR: Memory usage climbing to 2.5GB in 10 minutes
+ERROR: Event listeners not being cleaned up
+ERROR: Line 28 in api-service.js
+CLUE: Something is being registered but never removed
+
+=== DATABASE ===
+ERROR: Connection timeout after 5000ms
+ERROR: Wrong connection string format
+ERROR: Line 8 in database-config.js
+CLUE: Check the port number - it's wrong
+
+=== DR. VIMSWORTH'S FINAL NOTE ===
+"The bugs are simple once you see them. Trust your training.
+ Use Telescope to search. Use motions to fix. Use visual mode
+ if you need to change multiple lines at once. And remember:
+ the `.` command is your friend for repeated fixes.
+
+ You've got this. I made sure of it."
+
+=== QUICK FIX GUIDE ===
+1. Start with database-config.js (it's the quickest)
+2. Then web-app.js (one line to add)
+3. Finally api-service.js (one line to remove)
+
+Time limit: 15 minutes
+Your training ends here, Detective.

@@ -1,0 +1,50 @@
+╔═══════════════════════════════════════════════════════════╗
+║              SANDBOX PLAYGROUND                           ║
+║           Practice anything here safely!                  ║
+╚═══════════════════════════════════════════════════════════╝
+
+Feel free to experiment with any commands you've learned!
+
+=== PRACTICE AREA ===
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+The quick brown fox jumps over the lazy dog.
+function example() { return true; }
+var oldStyle = "change me";
+
+Try some motions:
+- w w w (forward 3 words)
+- ci{ (change inside brackets)
+- dd (delete this line)
+- yy (copy this line)
+- p (paste below)
+
+=== VISUAL MODE PRACTICE ===
+
+Row 1 data
+Row 2 data
+Row 3 data
+Row 4 data
+
+Use Ctrl+v to select columns!
+
+=== REPETITION PRACTICE ===
+
+Change change change change change
+foo foo foo foo foo
+test test test test test
+
+Try: /foo<Enter>cwbar<Esc>n.n.n.
+
+=== YOUR NOTES ===
+
+(Write anything here - this is your space!)
+
+
+
+
+
+---
+
+"This is where I spent my early days too. Keep practicing."
+- Dr. Elena Vimsworth

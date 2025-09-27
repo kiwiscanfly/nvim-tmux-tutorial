@@ -1,0 +1,17 @@
+CHALLENGE: Use visual block mode to add borders to this art
+
+  /\_/\
+ ( o.o )
+  > ^ <
+
+  /\_/\
+ ( o.o )
+  > ^ <
+
+  /\_/\
+ ( o.o )
+  > ^ <
+
+TIP: Select the left side with Ctrl+v, then use 'I' to insert at the start of each line!
+
+Goal: Add '| ' to the left of each cat

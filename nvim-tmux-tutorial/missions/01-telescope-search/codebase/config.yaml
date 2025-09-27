@@ -1,0 +1,23 @@
+# PROJECT PROMETHEUS CONFIGURATION
+# [TOKEN-GAMMA-1] "JSON structures hide nested truths"
+
+database:
+  host: localhost
+  port: 5432
+  name: prometheus_db
+  pool_size: 20
+
+redis:
+  host: localhost
+  port: 6379
+  ttl: 3600
+
+server:
+  port: 3000
+  timeout: 30
+  max_connections: 100
+
+logging:
+  level: info
+  format: json
+  output: stdout

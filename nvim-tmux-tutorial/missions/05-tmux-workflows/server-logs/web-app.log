@@ -1,0 +1,9 @@
+[2024-09-27 10:00:00] INFO Server started on port 3000
+[2024-09-27 10:00:05] INFO Connected to database
+[2024-09-27 10:01:23] WARN Slow query: SELECT * FROM users (245ms)
+[2024-09-27 10:02:15] INFO User login: elena@prometheus.dev
+[2024-09-27 10:03:42] ERROR Failed to load resource: /api/data
+[2024-09-27 10:04:18] INFO Cache hit rate: 82%
+[2024-09-27 10:05:03] WARN Memory usage: 1.1GB
+
+TIP: Use 'tail -f web-app.log' to monitor in real-time

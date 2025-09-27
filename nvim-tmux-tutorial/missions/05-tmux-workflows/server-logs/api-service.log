@@ -1,0 +1,6 @@
+[2024-09-27 10:00:00] API service listening on :8080
+[2024-09-27 10:00:12] GET /health 200 2ms
+[2024-09-27 10:01:34] POST /api/users 201 45ms
+[2024-09-27 10:02:56] GET /api/users/1 200 12ms
+[2024-09-27 10:03:18] PUT /api/users/1 200 38ms
+[2024-09-27 10:04:42] DELETE /api/sessions 204 8ms
