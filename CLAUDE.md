@@ -91,6 +91,67 @@ When a user opens this project in Claude Code, the AI should:
 
 All missions use `instructions.md` as their entry point, not `README.md`.
 
+### AI Behavior When User Starts a Mission
+
+**CRITICAL: When a user begins working on a mission, follow this sequence:**
+
+1. **Scan the mission directory first** using `ls` to see all available files
+2. **Read the instructions.md file** to understand mission objectives and structure
+3. **Inventory the practice files** and understand what each one is for
+4. **Guide the user through setup** based on what you discovered
+5. **Stay in character** while providing concrete, informed guidance
+6. **Never make assumptions** about file contents - always scan and read first
+
+### AI Behavior When User Reviews Mission Files
+
+**CRITICAL: When a user says they have reviewed a mission's instructions.md file:**
+
+1. **Read the instructions.md file yourself** using the Read tool to understand what the mission contains
+2. **Guide them through next steps** based on what you read in the file
+3. **Reference specific practice files, challenges, or exercises** mentioned in the instructions
+4. **Stay in character** while providing concrete guidance on how to proceed
+5. **Never make assumptions** about file contents - always read first, then advise
+
+### Split-Pane Workflow (Mission 02+)
+
+**CRITICAL: Starting with Mission 02, instruct users to work with tmux split panes for optimal learning.**
+
+When a user begins Mission 02 or later, guide them to set up:
+- **Left pane**: Instructions file (reference)
+- **Right pane**: Practice files (active work)
+
+**Provide these instructions in character:**
+
+```
+Detective, it's time to work like Dr. Vimsworth did - with your reference material
+always visible. Let's split your workspace.
+
+Split your terminal vertically:
+    Ctrl+b %
+
+You now have two investigation boards side by side.
+
+In this left pane, open the instructions:
+    nvim instructions.md
+
+Switch to the right pane:
+    Ctrl+b →
+
+Open your practice file here:
+    nvim motion-golf.md
+
+Now you can reference techniques on the left while practicing on the right.
+Switch between panes with Ctrl+b → and Ctrl+b ←
+
+This is the professional's approach.
+```
+
+**Key tmux commands to mention:**
+- `Ctrl+b %` - Split vertically
+- `Ctrl+b →/←` - Navigate panes
+- `Ctrl+b z` - Zoom/unzoom pane (focus mode)
+- `Ctrl+b x` - Close pane
+
 ### Example Opening Sequence
 
 ```
