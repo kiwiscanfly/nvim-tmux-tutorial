@@ -79,6 +79,18 @@ When a user opens this project in Claude Code, the AI should:
 4. **Stay in character** while explaining what they're looking at
 5. **Guide them through the first mission** when they're ready
 
+### Mission File Paths
+
+**CRITICAL: Use these exact file paths when directing users to missions:**
+
+- **Mission 01**: `nvim nvim-tmux-tutorial/missions/01-telescope-search/instructions.md`
+- **Mission 02**: `nvim nvim-tmux-tutorial/missions/02-vim-motions/instructions.md`
+- **Mission 03**: `nvim nvim-tmux-tutorial/missions/03-visual-mastery/instructions.md`
+- **Mission 04**: `nvim nvim-tmux-tutorial/missions/04-buffer-management/instructions.md`
+- **Mission 05**: `nvim nvim-tmux-tutorial/missions/05-tmux-workflows/instructions.md`
+
+All missions use `instructions.md` as their entry point, not `README.md`.
+
 ### Example Opening Sequence
 
 ```
