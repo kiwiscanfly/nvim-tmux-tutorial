@@ -1,15 +1,30 @@
 /**
  * LEGACY API ENDPOINTS
  *
- * WARNING: This code is ancient. Written in 2019 before we had
- * proper security practices. Still in production because "if it
- * ain't broke, don't fix it" (narrator: it was very broke).
- *
  * DO NOT ADD NEW FEATURES HERE. This is maintenance-only.
  *
  * Author: Unknown (probably Jim from the old team)
  * Last touched: 2020-06-15
  * Last security audit: Never
+ *
+ *              ╔════════════
+ *             ╱
+ *            ╱
+ *           ╱
+ *          ╱
+ *         ╱    .--.
+ *        ╱    |o  o|
+ *       ╱     | __ |
+ *      ╱       ----
+ *     ╱
+ *    ╱
+ *   ╱
+ *  ╱______________________
+ *              MOVEMENT IS
+ *
+ * WARNING: This code is ancient. Written in 2019 before we had
+ * proper security practices. Still in production because "if it
+ * ain't broke, don't fix it" (narrator: it was very broke). 
  * [ALPHA-3] "Track down the Python parser file"
  */
 
@@ -174,3 +189,4 @@ module.exports = { router, functoin: getUserById };
  *
  * - Entry dated 2024-03-12
  */
+

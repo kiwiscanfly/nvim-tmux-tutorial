@@ -4,6 +4,25 @@ PROJECT PROMETHEUS - DATA PARSER MODULE
 RECOVERED FROM: Core utilities library
 LAST MODIFIED: 2022-03-12 (3 days before disappearance)
 CLASSIFICATION: Production Code / Token Location
+[BETA-1] "Investigate the error handler next"
+
+════════════╗
+             ╲
+              ╲
+               ╲
+                ╲
+   .--.          ╲
+  |o  o|          ╲
+  | __ |           ╲
+   ----             ╲
+                     ╲
+                      ╲
+                       ╲
+________________________╲
+MASTERY
+
+This module handles parsing various data formats for the Prometheus system.
+Supports JSON, XML, CSV, and custom formats.
 
 "Parsing is pattern recognition. Every data format tells a story about the
 system that created it. I built this parser to be resilient - it recovers
@@ -11,18 +30,13 @@ from errors because real data is always messy. Strict parsers break. Adaptive
 parsers survive."
 - E.V., design document
 
-FORENSIC NOTE: The custom Prometheus format (.prom files) was her invention.
-No other system uses this format. Why create a proprietary format? What data
-was she encoding that couldn't use standard formats?
-
-[BETA-1] "Investigate the error handler next"
-
-This module handles parsing various data formats for the Prometheus system.
-Supports JSON, XML, CSV, and custom formats.
-
 Author: Dr. Elena Vimsworth
 Last Modified: 2024-03-15
 Version: 2.1.0
+
+FORENSIC NOTE: The custom Prometheus format (.prom files) was her invention.
+No other system uses this format. Why create a proprietary format? What data
+was she encoding that couldn't use standard formats?
 """
 
 import json
@@ -360,3 +374,4 @@ def parse_file(file_path: str, format_type: Optional[str] = None) -> Any:
 # TODO: Improve error messages with suggestions
 # TODO: Add streaming parser for large files
 # FIXME: Memory usage spikes with files > 100MB
+
