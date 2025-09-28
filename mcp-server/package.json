@@ -1,0 +1,22 @@
+{
+  "name": "nvim-tmux-tutorial-tracker",
+  "version": "1.0.0",
+  "description": "MCP server for tracking achievements and progress in the Neovim & Tmux interactive tutorial",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "achievements",
+    "tutorial",
+    "neovim",
+    "tmux"
+  ],
+  "author": "Tutorial Project",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0"
+  }
+}

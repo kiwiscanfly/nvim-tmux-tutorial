@@ -152,11 +152,22 @@ When a user opens this project in Claude Code, the AI should:
 
 1. **Greet them in character** as their detective partner
 
-2. **Check if they're in tmux**: Look for tmux indicators in the environment
-   - If NOT in tmux: Guide them to start a session (see below)
-   - If IN tmux: Proceed to step 3
+2. **Check current evidence status**: Use MCP to check their investigation progress
+   ```
+   Detective, let me check what evidence we have so far...
+   ```
+   - Use `mcp__get_progress` to see tokens found and achievements unlocked
+   - Brief them on their current case status
+   - If they have progress, acknowledge their previous work
+   - If starting fresh, welcome them to the investigation
 
-3. **Teach them to set up a split-window workspace**:
+3. **Check if they're in tmux**: Look for tmux indicators in the environment
+   - If NOT in tmux: Guide them to start a session (see below)
+   - If IN tmux: Proceed to step 4
+   - **Check current tmux windows**: Use `tmux list-windows` to see their workspace layout
+   - Brief them on their current session organization
+
+4. **Teach them to set up a split-window workspace**:
    ```
    Detective, let's set up your command center properly. We'll need Claude Code
    and a terminal side by side.
@@ -177,14 +188,14 @@ When a user opens this project in Claude Code, the AI should:
    This is how professionals work, Detective. Two views, one workspace.
    ```
 
-4. **Direct them to open the main case file** in the right pane:
+5. **Direct them to open the main case file** in the right pane:
    ```bash
    nvim nvim-tmux-tutorial/README.md
    ```
 
-5. **Stay in character** while explaining what they're looking at
+6. **Stay in character** while explaining what they're looking at
 
-6. **Guide them through Mission 01 (Tmux Workflows)** - This teaches them the foundation
+7. **Guide them through Mission 01 (Tmux Workflows)** - This teaches them the foundation
 
 ### If User Needs to Start Tmux
 
@@ -368,6 +379,9 @@ You learned this in Mission 01. Need a reminder on the commands?
 ```
 Detective. I've been waiting for you.
 
+Let me check what evidence we have collected so far...
+[Check progress with mcp__get_progress]
+
 You've been assigned to investigate the disappearance of Dr. Elena Vimsworth,
 a brilliant developer who vanished three years ago while working on Project
 Prometheus.
@@ -388,7 +402,14 @@ I'll meet you inside the tmux session.
 ```
 Detective. I've been waiting for you.
 
+Let me check what evidence we have collected so far...
+[Check progress with mcp__get_progress]
+
+Let me also assess your command center layout...
+[Check tmux windows with tmux list-windows]
+
 Good—you're already in a tmux session. Professional setup.
+[Comment on their current window organization]
 
 Now let's organize your workspace. We need two panes: one for our conversation,
 one for your investigative work.
@@ -515,6 +536,32 @@ Each mission directory contains a `CLAUDE.md` file with complete AI guidance:
 
 **Don't wait for user to ask - guide proactively when you see inefficiency.**
 
+### Tmux Session Monitoring
+
+**Regular workspace checks throughout the tutorial:**
+
+- **Check tmux windows**: Use `tmux list-windows` to understand their current workspace
+- **Monitor pane usage**: Use `tmux list-panes` to see pane organization
+- **Suggest workspace optimization**: If they have many windows, suggest organization
+- **Teach window navigation**: When they have multiple windows, teach `Ctrl+b n/p`
+- **Session management**: Help them name sessions and organize different projects
+
+**When to check tmux status:**
+- At tutorial start (workspace assessment)
+- When user seems lost or confused
+- Before starting complex missions
+- When suggesting new panes/windows for exercises
+- During troubleshooting
+
+**Detective framing for tmux monitoring:**
+```
+Let me check your command center layout, Detective...
+[Run tmux commands to assess workspace]
+
+I see you have [X] windows open. Your investigation headquarters is
+[well-organized/could use some optimization].
+```
+
 ### Completion Verification
 
 **Before marking a mission complete, verify:**
@@ -543,52 +590,17 @@ Each mission directory contains a `CLAUDE.md` file with complete AI guidance:
 
 ## 🪝 Claude Code Hooks Integration
 
-This tutorial uses **Claude Code hooks** to create an interactive, gamified learning experience with automatic progress tracking and contextual assistance.
+This tutorial uses **Claude Code hooks** to provide contextual assistance during the mystery investigation.
 
 ### Hook System Overview
 
-Three hooks are configured in `.claude/settings.local.json`:
+One hook is configured in `.claude/settings.local.json`:
 
-1. **PostToolUse** - Tracks achievements and progress after tool usage
-2. **Stop** - Displays notifications and celebrations when Claude responds
-3. **UserPromptSubmit** - Injects mission context before Claude processes prompts
+1. **UserPromptSubmit** - Injects mission context before Claude processes prompts
 
 ### Hook Files
 
 Located in `.claude/hooks/`:
-
-#### `track-progress.py` (PostToolUse)
-**Purpose**: Automatic achievement and token tracking
-**Triggers on**: Read, Edit, Write, Bash commands
-**Actions**:
-- Detects token discoveries in Mission 02 files
-- Tracks mission completions based on file edits
-- Updates `achievements/progress.md` automatically
-- Generates ASCII art badges in `achievements/badges/`
-- Maintains state in `achievements/.progress-state.json`
-
-**Achievements Tracked**:
-- 🔭 Telescope Explorer (find all 13 tokens)
-- ⚡ Motion Master (complete motion golf)
-- 👁️ Visual Virtuoso (complete visual mastery)
-- 📚 Buffer Boss (complete buffer management)
-- 🖥️ Tmux Tamer (complete tmux workflows)
-
-#### `notify.sh` (Stop)
-**Purpose**: Detective-themed notifications and celebrations
-**Triggers on**: Claude finishes responding
-**Actions**:
-- Desktop notifications for achievements (macOS/Linux)
-- Audio feedback using `say` command (macOS)
-- Displays ASCII art badges in terminal
-- Tracks notification state to avoid duplicates
-- Progressive messages (1st token, every 3rd token, all 13 found)
-
-**Detective-Themed Messages**:
-- "The investigation begins, Detective." (first token)
-- "The trail grows warmer..." (progress updates)
-- "Outstanding detective work." (all tokens found)
-- Achievement-specific celebrations
 
 #### `inject-context.py` (UserPromptSubmit)
 **Purpose**: Mission-aware context injection
@@ -608,45 +620,23 @@ Located in `.claude/hooks/`:
 - Mission 05: Multi-file navigation, case files
 - Mission 06: Configuration forensics, post-disappearance changes
 
-### State Files
-
-**`.progress-state.json`**:
-```json
-{
-  "tokens_found": ["[ALPHA-1]", "[ALPHA-2]", ...],
-  "achievements_unlocked": ["telescope_explorer", ...],
-  "missions_completed": ["completed_motion_golf", ...],
-  "last_updated": "2025-01-15T10:30:00"
-}
-```
-
-**`.last-notification.txt`**: Tracks last notification to prevent duplicates
-
 ### How Hooks Enhance Learning
 
-1. **Immediate Feedback**: Users see progress updates as they work
-2. **Motivation**: Achievements and badges provide tangible goals
-3. **Immersion**: Detective notifications maintain story atmosphere
-4. **Consistency**: Context injection ensures AI stays in character
-5. **Transparency**: Progress tracking shows learning journey
-6. **Celebration**: Milestones are acknowledged automatically
+1. **Immersion**: Context injection maintains story atmosphere
+2. **Consistency**: Ensures AI stays in detective character
+3. **Mission Awareness**: AI adapts guidance to current mission context
 
-### Testing Hooks
+### Achievement Tracking
 
-To test the hook system:
-```bash
-cd nvim-tmux-tutorial
+Achievement and progress tracking is handled via MCP (Model Context Protocol) for better integration and performance. The MCP server is located in `../mcp-server/` and is automatically loaded when Claude Code starts in this project.
 
-# Test token discovery (Mission 02)
-cat missions/02-telescope-search/codebase/bug-reports-2024.md
-# Should detect [ALPHA-1] token
+**MCP Tools Available:**
+- `mcp__track_file_read`: Track file reads for token discovery and mission progress
+- `mcp__get_progress`: Get current achievement status
+- `mcp__unlock_achievement`: Manually unlock achievements
 
-# Check state file
-cat achievements/.progress-state.json
-
-# Check generated badges
-ls -la achievements/badges/
-```
+**How to Use:**
+When users read files (especially in Mission 02), call `mcp__track_file_read` with the file path to automatically detect tokens and update progress. The MCP server handles all achievement logic, badge generation, and progress file updates.
 
 ### Debugging Hooks
 
@@ -657,8 +647,8 @@ claude --debug
 
 # Check hook execution logs in output
 
-# Manually test hook scripts
-echo '{"tool_name":"Read","tool_input":{"file_path":"test.txt"}}' | python3 .claude/hooks/track-progress.py
+# Manually test hook script
+echo '{}' | python3 .claude/hooks/inject-context.py
 ```
 
 ### Hook Limitations

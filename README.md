@@ -25,7 +25,16 @@ git clone [repository-url]
 cd [repository-name]
 ```
 
-### 2. Start a Tmux Session with Claude Code
+### 2. Install Dependencies
+
+```bash
+# Install the achievement tracking system
+cd mcp-server
+npm install
+cd ..
+```
+
+### 3. Start a Tmux Session with Claude Code
 
 ```bash
 # Navigate to the tutorial directory
@@ -38,7 +47,7 @@ tmux new -s prometheus-investigation
 claude
 ```
 
-### 3. Begin the Investigation
+### 4. Begin the Investigation
 
 Once Claude Code starts, **say "Hello"** to begin.
 
