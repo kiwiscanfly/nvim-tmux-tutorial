@@ -23,11 +23,39 @@ Detective, you've been brought onto this cold case. Dr. Elena Vimsworth—known 
 
 **Your mission:** Master her investigative tools and uncover what happened.
 
-**First things first:** You're reading this in Neovim. To exit this file and return to your terminal, type:
+## 📖 NAVIGATING THIS FILE (Your First Lesson)
+
+You're reading this in **Neovim**—Dr. Vimsworth's editor of choice. Here are the essential commands to navigate this case file:
+
+### Moving Around
 ```
-:q
+j          Move down one line
+k          Move up one line
+h          Move left one character
+l          Move right one character
+
+Ctrl+d     Scroll down half a page
+Ctrl+u     Scroll up half a page
+
+gg         Jump to top of file
+G          Jump to bottom of file
 ```
-Then press Enter. (The colon `:` enters command mode, `q` means quit.)
+
+### Searching
+```
+/text      Search for "text" (press Enter, then n for next match)
+?text      Search backwards
+```
+
+### Exiting
+```
+:q         Quit (returns you to terminal)
+:q!        Quit without saving
+```
+
+**Try it now:** Press `j` a few times to scroll down. Press `gg` to jump back to the top. Press `/MISSION` and Enter to find the missions section.
+
+When you're ready to continue, keep reading below.
 
 ## CASE BRIEFING
 
