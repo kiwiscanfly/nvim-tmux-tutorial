@@ -68,32 +68,26 @@ fi
 # Check for new achievements
 if [[ -n "$LAST_ACHIEVEMENT" ]] && [[ "$LAST_NOTIFIED" != "achievement_$LAST_ACHIEVEMENT" ]]; then
     case "$LAST_ACHIEVEMENT" in
-        "telescope_explorer")
-            send_notification "🔭 Achievement Unlocked!" "Telescope Explorer - All tokens discovered" "Hero"
+        "completed_tmux_workflows")
+            send_notification "🖥️ Mission 01 Complete!" "Command center established. The investigation begins." "Hero"
             ;;
-        "motion_master")
-            send_notification "⚡ Achievement Unlocked!" "Motion Master - Dr. Vimsworth would be proud" "Hero"
+        "completed_telescope_search")
+            send_notification "🔭 Mission 02 Complete!" "Evidence gathered. The search techniques are mastered." "Hero"
             ;;
-        "visual_virtuoso")
-            send_notification "👁️ Achievement Unlocked!" "Visual Virtuoso - Surgical code manipulation" "Hero"
+        "completed_vim_motions")
+            send_notification "⚡ Mission 03 Complete!" "Motion mastery achieved. Dr. Vimsworth would be proud." "Hero"
             ;;
-        "buffer_boss")
-            send_notification "📚 Achievement Unlocked!" "Buffer Boss - Multiple leads tracked simultaneously" "Hero"
+        "completed_visual_mastery")
+            send_notification "👁️ Mission 04 Complete!" "Visual editing perfected. Evidence extraction complete." "Hero"
             ;;
-        "tmux_tamer")
-            send_notification "🖥️ Achievement Unlocked!" "Tmux Tamer - Command center operational" "Hero"
+        "completed_buffer_management")
+            send_notification "📚 Mission 05 Complete!" "Multi-file navigation mastered. All leads tracked." "Hero"
             ;;
         "completed_motion_golf")
             send_notification "⛳ Motion Golf Complete!" "Your efficiency rivals Dr. Vimsworth herself" "Hero"
             ;;
-        "completed_visual_mastery")
-            send_notification "🎯 Visual Mastery Complete!" "Evidence extraction skills acquired" "Hero"
-            ;;
-        "completed_buffer_management")
-            send_notification "📂 Buffer Management Complete!" "Multi-file investigation mastered" "Hero"
-            ;;
-        "completed_tmux_workflows")
-            send_notification "🖥️ Tmux Workflows Complete!" "Your command center is operational" "Hero"
+        "telescope_explorer")
+            send_notification "🔍 All 13 Tokens Found!" "The message is revealed, Detective" "Hero"
             ;;
     esac
 

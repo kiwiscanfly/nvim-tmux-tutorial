@@ -26,30 +26,40 @@ TOKEN_PATTERN = r'\[(ALPHA|BETA|GAMMA|DELTA|EPSILON)-\d+\]'
 
 # Achievement definitions
 ACHIEVEMENTS = {
-    'telescope_explorer': {
+    'completed_tmux_workflows': {
+        'name': '🖥️ Tmux Tamer',
+        'trigger': 'mission_01_complete',
+        'badge': 'tmux_badge.txt'
+    },
+    'completed_telescope_search': {
         'name': '🔭 Telescope Explorer',
-        'trigger': 'found_all_tokens',
+        'trigger': 'mission_02_complete',
         'badge': 'telescope_badge.txt'
     },
-    'motion_master': {
+    'completed_vim_motions': {
         'name': '⚡ Motion Master',
-        'trigger': 'completed_motion_golf',
+        'trigger': 'mission_03_complete',
         'badge': 'motion_badge.txt'
     },
-    'visual_virtuoso': {
+    'completed_visual_mastery': {
         'name': '👁️ Visual Virtuoso',
-        'trigger': 'completed_visual_mastery',
+        'trigger': 'mission_04_complete',
         'badge': 'visual_badge.txt'
     },
-    'buffer_boss': {
+    'completed_buffer_management': {
         'name': '📚 Buffer Boss',
-        'trigger': 'completed_buffer_management',
+        'trigger': 'mission_05_complete',
         'badge': 'buffer_badge.txt'
     },
-    'tmux_tamer': {
-        'name': '🖥️ Tmux Tamer',
-        'trigger': 'completed_tmux_workflows',
-        'badge': 'tmux_badge.txt'
+    'completed_motion_golf': {
+        'name': '⛳ Motion Golf Champion',
+        'trigger': 'practice_complete',
+        'badge': 'golf_badge.txt'
+    },
+    'telescope_explorer': {
+        'name': '🔍 All Tokens Found',
+        'trigger': 'found_all_tokens',
+        'badge': 'tokens_badge.txt'
     }
 }
 
@@ -93,21 +103,31 @@ def check_for_tokens(tool_name, tool_input):
         return []
 
 def check_mission_completion(tool_name, tool_input):
-    """Detect mission completions based on file edits"""
-    if tool_name not in ['Edit', 'Write']:
-        return None
-
+    """Detect mission completions based on file activity"""
     file_path = tool_input.get('file_path', '')
 
-    # Check for mission completions
-    if 'motion-golf.md' in file_path:
-        return 'completed_motion_golf'
-    elif 'missions/04-visual-mastery' in file_path and ('columns.csv' in file_path or 'refactor-me.py' in file_path):
-        return 'completed_visual_mastery'
-    elif 'missions/05-buffer-management' in file_path and 'project-files' in file_path:
-        return 'completed_buffer_management'
-    elif 'missions/01-tmux-workflows' in file_path:
-        return 'completed_tmux_workflows'
+    # Check for mission activity (reading or editing)
+    # Reading the next mission's README suggests completion of previous mission
+    if tool_name == 'Read':
+        if 'missions/02-telescope-search/README.md' in file_path:
+            return 'completed_tmux_workflows'
+        elif 'missions/03-vim-motions/README.md' in file_path:
+            return 'completed_telescope_search'
+        elif 'missions/04-visual-mastery/README.md' in file_path:
+            return 'completed_vim_motions'
+        elif 'missions/05-buffer-management/README.md' in file_path:
+            return 'completed_visual_mastery'
+        elif 'missions/06-lsp-investigation/README.md' in file_path:
+            return 'completed_buffer_management'
+
+    # Also check for practice file edits
+    if tool_name in ['Edit', 'Write']:
+        if 'motion-golf.md' in file_path:
+            return 'completed_motion_golf'
+        elif 'missions/04-visual-mastery' in file_path and ('columns.csv' in file_path or 'refactor-me.py' in file_path):
+            return 'completed_visual_mastery'
+        elif 'missions/05-buffer-management' in file_path and 'project-files' in file_path:
+            return 'completed_buffer_management'
 
     return None
 
