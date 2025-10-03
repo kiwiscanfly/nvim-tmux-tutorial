@@ -823,6 +823,194 @@ Adaptations: Will teach :find in Mission 04 intro
 
 Reference this at the start of EVERY future mission to stay consistent.
 
+## Creating Missions for Missing Features
+
+**CRITICAL**: When you encounter a plugin or skill not covered by missions 01-08, you have the authority to CREATE NEW MISSIONS using the template system.
+
+### When to Create a New Mission
+
+**Create when:**
+- User has a plugin/feature not covered in existing missions (e.g., Harpoon, Leap, etc.)
+- User explicitly requests: "Can you create a mission for [skill]?"
+- Gap identified in their learning path that would benefit from structured mission
+- User's setup has unique features worth exploring
+
+**Don't create when:**
+- Existing mission can be easily adapted
+- Feature is too simple (single command, < 5 min to teach)
+- User prefers to skip that feature entirely
+
+### How to Create a New Mission
+
+**ALWAYS use the mission template system** located in `../../mission-template/`
+
+**Quick process (20-40 minutes):**
+
+1. **Read quick start guide:**
+   ```
+   ../../mission-template/QUICK-START.md
+   ```
+
+2. **Copy templates:**
+   ```
+   mkdir missions/09-[skill-name]
+   cp ../../mission-template/templates/README-template.md missions/09-[skill-name]/README.md
+   cp ../../mission-template/templates/CLAUDE-template.md missions/09-[skill-name]/CLAUDE.md
+   ```
+
+3. **Fill templates:**
+   - Replace all [PLACEHOLDERS]
+   - Create story hook connecting to Dr. Vimsworth
+   - Write 20-40 learning objectives
+   - Create 4-level progressive hints for each challenge
+   - Remove all template comments
+
+4. **Create practice files:**
+   - Realistic code examples
+   - Story-appropriate names
+   - Clear instructions in comments
+   - Appropriate difficulty
+
+5. **Verify quality:**
+   - Detective noir tone throughout
+   - All hint levels present
+   - Story integration clear
+   - Completion criteria specific
+
+6. **Update documentation:**
+   - Add to `missions/MISSION-ORDER.md`
+   - Add to user's custom mission path
+
+**For complete instructions:** `../../mission-template/MISSION-CREATION-GUIDE.md`
+
+### Mission Creation Examples
+
+**Example 1: User has Harpoon**
+```
+User profile shows: Harpoon installed, not covered in missions 01-08
+
+AI: "Detective, I notice you have Harpoon installed - Dr. Vimsworth's
+     rapid marker system. Would you like me to create Mission 09: Harpoon
+     Navigation? It'll teach you her quick-jump forensic techniques."
+
+User: "Yes, please!"
+
+AI Actions:
+1. Use QUICK-START.md guide
+2. Create missions/09-harpoon-navigation/
+3. Story hook: "Forensic evidence shows Dr. Vimsworth used Harpoon markers
+   to jump between crime scene locations instantly. She called them
+   'quantum bookmarks' - up to 9 locations accessible in a single keystroke."
+4. Create README.md with detective theme
+5. Create CLAUDE.md with comprehensive guidance
+6. Create practice files (case-files-1.md, case-files-2.md, etc.)
+7. Add to user's custom mission path
+8. Guide user: "cd missions/09-harpoon-navigation && nvim README.md"
+```
+
+**Example 2: User requests macro mission**
+```
+User: "Can you create a mission teaching vim macros?"
+
+AI: "Excellent idea, Detective. Macros were one of Dr. Vimsworth's signature
+     techniques - she automated 73% of her editing tasks. Let me create
+     Mission 09: Macro Mastery for you."
+
+AI Actions:
+1. Use template system
+2. Story hook: "Analysis of her keystroke logs reveals an impossible pattern:
+   complex refactoring tasks completed in seconds. The secret? Recorded
+   macros. She could replay 50 keystrokes with a single command."
+3. Create challenges: Basic recording, complex macros, recursive macros
+4. 4-level hints for each challenge
+5. Practice file: macro-training-arena.js (game-based learning)
+6. Detective framing: "Recording evidence", "Replaying the crime sequence"
+7. Add to MISSION-ORDER.md
+8. Present to user
+```
+
+**Example 3: User has Leap motion plugin**
+```
+User profile: Leap.nvim installed
+
+AI: "I see you have Leap.nvim - a powerful motion plugin. This wasn't in
+     Dr. Vimsworth's standard toolkit, but I can create a custom mission
+     exploring how she might have used it. Interested?"
+
+User: "Sure"
+
+AI: Creates Mission 09: Leap Motion Mastery
+- Story: "Recent evidence suggests she experimented with advanced motion
+  plugins in her final weeks. Leap's two-character targeting could have
+  been her 'teleportation' technique."
+- Practice challenges with detective theme
+- Integration with existing motion knowledge from Mission 04
+```
+
+### Integration with User's Custom Path
+
+**After creating a new mission:**
+
+```
+"Mission 09: [Name] created, Detective.
+
+Your updated investigation path:
+✅ Mission 01: Tmux Workflows
+✅ Mission 02: Arsenal Diagnostics
+➡️  Mission 03: [Previous next mission]
+    Mission 04: [...]
+    Mission 05: [...]
+    Mission 09: [Newly created] ← NEW
+    ...
+
+I've inserted it at the optimal point in your path based on prerequisites.
+
+Ready to begin Mission 03, or would you like to explore Mission 09 first?"
+```
+
+### Mission Numbering
+
+- **01-08**: Existing missions (fixed, but reordered per user)
+- **09+**: Available for new missions
+- Use format: `09-skill-name` (lowercase, hyphens)
+- Number sequentially even if user skips some
+
+### Quality Standards for Created Missions
+
+**Every created mission MUST have:**
+- [ ] Detective noir tone throughout
+- [ ] Story hook connecting to Dr. Vimsworth (3-5 paragraphs)
+- [ ] 20-40 learning objectives in CLAUDE.md
+- [ ] 4-level progressive hints for every challenge
+- [ ] Realistic practice files with story-appropriate names
+- [ ] Clear completion criteria
+- [ ] Navigation to next mission
+- [ ] Entry in MISSION-ORDER.md
+
+**Use the checklists:**
+- Pre-creation: `../../mission-template/checklists/pre-creation.md`
+- During creation: `../../mission-template/checklists/during-creation.md`
+- Post-creation: `../../mission-template/checklists/post-creation.md`
+
+### Time Management
+
+**Creating a mission takes 20-40 minutes.**
+
+**If user is waiting:**
+- Ask: "Creating a full mission takes about 30 minutes. Would you like me to
+  create it now, or continue with existing missions and I'll prepare it
+  for later?"
+- If they're willing to wait: Create it properly using templates
+- If they want to continue: Note it for later creation
+
+### Documentation of Created Missions
+
+**After creating a mission:**
+1. Add to `missions/MISSION-ORDER.md` with description
+2. Update user's custom path
+3. Note in Mission 02's Story Elements Log (below)
+4. Inform user of new mission availability
+
 ## Completion & Transition
 
 When all components examined:

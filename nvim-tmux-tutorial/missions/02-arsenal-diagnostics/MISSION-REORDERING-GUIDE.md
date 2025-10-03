@@ -397,14 +397,258 @@ Expected: 04 → 05 → 07 (skip 03, 06, 08)
 
 ---
 
+---
+
+## Creating New Missions On-Demand
+
+**NEW CAPABILITY**: Mission 02 can now CREATE custom missions for features not covered in 01-08.
+
+### When to Create a New Mission
+
+**Scenario 1: User has unique plugin**
+```
+User has: Harpoon plugin for file marking
+Existing missions: Don't cover Harpoon
+Decision: CREATE Mission 09: Harpoon Navigation
+```
+
+**Scenario 2: User requests specific mission**
+```
+User says: "Can you create a mission for vim macros?"
+Decision: CREATE Mission 09: Macro Mastery
+```
+
+**Scenario 3: Gap in learning path**
+```
+User setup: Advanced plugins but missing intermediate skill
+Decision: CREATE bridge mission to fill gap
+```
+
+### How AI Creates Missions
+
+**CRITICAL**: Always use the mission template system located in `../../mission-template/`
+
+**Process:**
+
+1. **Check if creation is appropriate:**
+   - Is this feature substantial? (>5 min to teach)
+   - Would a structured mission help?
+   - Does user want it?
+
+2. **Get user consent:**
+   ```
+   "Detective, I notice you have [plugin] installed. Dr. Vimsworth used
+   similar techniques in her work. Would you like me to create a custom
+   Mission 09: [Skill Name] to explore this?"
+   ```
+
+3. **Use template system:**
+   - Quick guide: `../../mission-template/QUICK-START.md`
+   - Complete guide: `../../mission-template/MISSION-CREATION-GUIDE.md`
+   - Templates: `../../mission-template/templates/`
+   - Examples: `../../mission-template/examples/`
+
+4. **Create mission (20-40 min):**
+   - Copy templates to `missions/09-[name]/`
+   - Fill README.md with detective story hook
+   - Fill CLAUDE.md with 20-40 objectives and 4-level hints
+   - Create practice files with story integration
+   - Remove all template comments
+
+5. **Integrate into path:**
+   - Add to user's custom mission path
+   - Update `missions/MISSION-ORDER.md`
+   - Inform user of new mission
+
+### Example: Creating Harpoon Mission
+
+**User Setup:**
+```
+✅ Plugin Manager: lazy.nvim
+✅ Harpoon: Installed (not in missions 01-08)
+❌ Telescope: Not installed
+```
+
+**AI Decision:**
+```
+Since Telescope is missing but Harpoon is present, create Mission 09
+for Harpoon as the file navigation method.
+```
+
+**AI Actions:**
+```
+1. Inform user:
+   "Detective, I see you have Harpoon - a rapid file marking system.
+   Dr. Vimsworth used similar 'quantum bookmark' techniques. I can create
+   Mission 09: Harpoon Navigation to teach this. It'll take about 30 minutes
+   to prepare. Interested?"
+
+2. User: "Yes"
+
+3. Create mission using templates:
+   - README.md story hook: "Forensic analysis reveals Dr. Vimsworth marked
+     up to 9 critical file locations, accessible instantly via single
+     keystrokes. She called this 'crime scene teleportation.'"
+   - CLAUDE.md objectives: 20+ skills from basic marking to advanced workflows
+   - Practice files: case-file-alpha.md, case-file-beta.md, etc.
+   - 4-level hints for each challenge
+
+4. Update custom path:
+   ✅ 01: Tmux
+   ✅ 02: Diagnostics
+   ➡️  04: Vim Motions (Telescope skipped, start with editing)
+       05: Visual Mastery
+       09: Harpoon Navigation ← NEW (replaces/supplements Mission 03)
+       07: Buffer Management
+       [08 skipped - no LSP]
+
+5. Inform user:
+   "Mission 09: Harpoon Navigation created, Detective. This will be your
+   file navigation training. Ready to begin Mission 04: Vim Motions, or
+   would you like to explore Mission 09 first?"
+```
+
+### Example: User Requests Macro Mission
+
+**Scenario:**
+```
+User: "Can you teach me vim macros?"
+```
+
+**AI Response:**
+```
+"Excellent idea, Detective! Macros were one of Dr. Vimsworth's signature
+techniques. Analysis of her keystroke logs shows she automated 73% of her
+editing tasks using recorded macros.
+
+Let me create Mission 09: Macro Mastery for you. It'll take about 30 minutes
+to prepare a full mission with practice challenges and her secret techniques.
+Shall I proceed?"
+```
+
+**If user agrees:**
+```
+1. Use mission template system
+2. Create missions/09-macro-mastery/
+3. README.md story: "Impossibly fast edits. That's what colleagues reported.
+   She'd complete 50-keystroke refactoring tasks in under 2 seconds. The
+   secret? Recorded macros. One keystroke to replay complex sequences."
+4. CLAUDE.md: Comprehensive macro training (basic → recursive → advanced)
+5. Practice file: macro-training-arena.js (gamified challenges)
+6. Add to mission path after current position
+7. Guide user: "cd missions/09-macro-mastery && nvim README.md"
+```
+
+### Template System Reference
+
+**Files AI must use:**
+- **Quick start:** `../../mission-template/QUICK-START.md` (20-40 min process)
+- **Full guide:** `../../mission-template/MISSION-CREATION-GUIDE.md` (comprehensive)
+- **Templates:**
+  - `../../mission-template/templates/README-template.md`
+  - `../../mission-template/templates/CLAUDE-template.md`
+  - `../../mission-template/templates/directory-structure.md`
+- **Examples:**
+  - `../../mission-template/examples/example-filled-readme.md`
+  - `../../mission-template/examples/example-filled-claude.md`
+  - `../../mission-template/examples/comparison-notes.md`
+- **Checklists:**
+  - `../../mission-template/checklists/pre-creation.md`
+  - `../../mission-template/checklists/during-creation.md`
+  - `../../mission-template/checklists/post-creation.md`
+
+### Quality Standards
+
+**Every created mission MUST include:**
+- [ ] Detective noir tone throughout (no generic tutorial language)
+- [ ] Story hook connecting to Dr. Vimsworth (3-5 paragraphs)
+- [ ] 20-40 learning objectives organized in 4-6 categories
+- [ ] 4-level progressive hints for every challenge
+- [ ] Realistic practice files with story-appropriate names
+- [ ] Clear completion criteria
+- [ ] Next mission navigation
+- [ ] Entry in `missions/MISSION-ORDER.md`
+
+### Mission Numbering
+
+- **01-08:** Existing missions (reordered per user, but fixed content)
+- **09+:** Available for dynamically created missions
+- Format: `09-skill-name` (lowercase, hyphens)
+- Number sequentially: 09, 10, 11, etc.
+
+### When NOT to Create
+
+**Skip mission creation if:**
+- Feature is too simple (< 5 min to teach, just explain inline)
+- User doesn't want it (respect their choice)
+- Existing mission can be easily adapted (better to adapt than create)
+- User is overwhelmed (too much content already)
+
+**In these cases:**
+- Teach the skill inline during relevant mission
+- Add quick reference to existing mission
+- Skip entirely if user prefers
+
+### Time Management
+
+**Mission creation takes 20-40 minutes.**
+
+**If user is actively waiting:**
+```
+"Creating a complete mission with story integration, practice challenges,
+and comprehensive guidance takes about 30 minutes. Would you like me to
+create it now, or shall we continue with existing missions and I'll prepare
+Mission 09 for you to explore later?"
+```
+
+**Options:**
+- User willing to wait → Create mission properly using full template system
+- User wants to continue → Note for later, create between current missions
+- User unsure → Suggest continuing, offer to create later
+
+### Integration with Reordering
+
+**Created missions fit into custom path:**
+
+**Example path with created mission:**
+```
+DETECTIVE [NAME]'S CUSTOM PATH:
+✅ 01: Tmux Workflows
+✅ 02: Arsenal Diagnostics
+➡️  04: Vim Motions (Telescope skipped, start with editing)
+    05: Visual Mastery
+    09: Harpoon Navigation ← CREATED (replaces file nav)
+    07: Buffer Management
+    10: Macro Mastery ← CREATED (user requested)
+
+🚫 SKIPPED:
+❌ 03: Telescope (no Telescope installed)
+❌ 06: Text Objects (no mini.ai)
+❌ 08: LSP (no LSP configured)
+
+📝 CREATED:
+✨ 09: Harpoon Navigation (replaces Telescope for user's setup)
+✨ 10: Macro Mastery (user requested advanced skill)
+```
+
+### Documentation
+
+**After creating mission:**
+1. Add entry to `missions/MISSION-ORDER.md`
+2. Update user's custom path display
+3. Log in Mission 02 Story Elements (for consistency)
+4. Inform user clearly about new mission
+
+---
+
 ## Summary
 
-Mission 02 isn't just diagnostics—it's **path generation**.
+Mission 02 isn't just diagnostics—it's **path generation AND mission creation**.
 
-Every user gets a **custom tutorial** tailored to their setup.
+Every user gets a **custom tutorial** tailored to their setup, including **custom missions** for unique features.
 
-The AI creates, stores, and follows this path for the entire tutorial.
+The AI creates, stores, and follows this path for the entire tutorial, and can **generate new missions on-demand** using the template system.
 
-**Result**: No frustration, optimal learning, respect for user choice.
+**Result**: No frustration, optimal learning, respect for user choice, infinite extensibility.
 
-🎯 **Dynamic reordering makes the tutorial work for everyone.**
+🎯 **Dynamic reordering + on-demand mission creation makes the tutorial work for everyone.**

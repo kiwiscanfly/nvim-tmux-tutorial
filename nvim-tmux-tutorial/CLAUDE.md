@@ -95,6 +95,20 @@ This tutorial uses **progressive disclosure** for both story and technical learn
 - You SHOULD create custom examples that fit the mystery narrative
 - Keep all additions consistent with the established story framework
 
+**Creating New Missions**:
+- **When Mission 02 identifies missing features** → Create custom missions using the template system
+- **When user requests a specific mission ad-hoc** → Create it using the template system
+- **ALWAYS use the mission template system** located in `mission-template/`
+- **Quick creation:** Follow `mission-template/QUICK-START.md` (20-40 min process)
+- **Complete guide:** Use `mission-template/MISSION-CREATION-GUIDE.md` for comprehensive instructions
+- **Templates available:** `mission-template/templates/` (README, CLAUDE, directory structure)
+- **Examples to reference:** `mission-template/examples/` (real mission examples)
+- **Quality checklists:** `mission-template/checklists/` (pre, during, post-creation)
+- **Number missions sequentially:** 09, 10, 11, etc. (01-08 are existing)
+- **Update mission order:** Add to `missions/MISSION-ORDER.md` when created
+- **Detective tone required:** All created missions must maintain the investigation narrative
+- **Story integration:** Connect to Dr. Vimsworth's methods and the investigation
+
 **Communication Style**:
 - Use detective/investigation terminology ("clues", "evidence", "suspects", "the case", "leads")
 - Refer to the user as "Detective" or "Partner"
