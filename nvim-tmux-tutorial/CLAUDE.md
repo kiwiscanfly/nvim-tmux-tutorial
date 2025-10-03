@@ -294,15 +294,22 @@ When you add new story elements, you MUST document them in the appropriate CLAUD
 **CRITICAL: Use these exact file paths when directing users to missions:**
 
 - **Mission 01**: `nvim nvim-tmux-tutorial/missions/01-tmux-workflows/README.md` **(FIRST - Foundation)**
-- **Mission 02**: `nvim nvim-tmux-tutorial/missions/02-telescope-search/README.md`
-- **Mission 03**: `nvim nvim-tmux-tutorial/missions/03-vim-motions/README.md`
-- **Mission 04**: `nvim nvim-tmux-tutorial/missions/04-visual-mastery/README.md`
-- **Mission 05**: `nvim nvim-tmux-tutorial/missions/05-buffer-management/README.md`
-- **Mission 06**: `nvim nvim-tmux-tutorial/missions/06-lsp-investigation/README.md`
+- **Mission 02**: `nvim nvim-tmux-tutorial/missions/02-arsenal-diagnostics/README.md` **(SECOND - Setup Verification)**
+- **Mission 03**: `nvim nvim-tmux-tutorial/missions/03-telescope-search/README.md`
+- **Mission 04**: `nvim nvim-tmux-tutorial/missions/04-vim-motions/README.md`
+- **Mission 05**: `nvim nvim-tmux-tutorial/missions/05-visual-mastery/README.md`
+- **Mission 06**: `nvim nvim-tmux-tutorial/missions/06-text-object-mastery/README.md`
+- **Mission 07**: `nvim nvim-tmux-tutorial/missions/07-buffer-management/README.md`
+- **Mission 08**: `nvim nvim-tmux-tutorial/missions/08-lsp-investigation/README.md`
 
 All missions use `README.md` as their entry point (keeping with the in-story nature of the tutorial).
 
-**IMPORTANT**: Mission 01 (Tmux Workflows) is now FIRST. It teaches the workspace management foundation that all other missions depend on.
+**IMPORTANT**:
+- Mission 01 (Tmux Workflows) teaches workspace management foundation
+- Mission 02 (Arsenal Diagnostics) is INTERACTIVE - AI verifies user's Neovim setup and **creates a custom mission path**
+- **Mission 02 REORDERS remaining missions** based on what user has installed
+- All subsequent missions adapt based on user's setup profile and custom path from Mission 02
+- The mission numbers (03-08) are **default order** - actual order varies per user
 
 ### AI Behavior When User Starts a Mission
 
@@ -673,43 +680,64 @@ This document outlines 20+ ways to further enhance the AI-driven learning experi
 - Breadcrumb clues leading to the next discovery
 - Final reveal message upon completion
 
-### 2. Five Progressive Missions
+### 2. Eight Progressive Missions
 Each mission focuses on specific skill sets with practical exercises:
 
-**Mission 01: Telescope Search**
-- File finding with `<Space>ff`
-- Content search with `<Space>fg` (live grep)
+**Mission 01: Tmux Workflows** (Foundation)
+- Session management (create, detach, attach)
+- Window management (create, switch, kill)
+- Pane operations (split, navigate, resize, zoom)
+- Multi-project monitoring setup
+- Clipboard integration between panes
+
+**Mission 02: Arsenal Diagnostics** (Interactive Setup)
+- Component-by-component Neovim verification
+- Interactive AI diagnostics conversation
+- Install missing plugins OR adapt tutorial
+- Build user setup profile
+- Ensure tools work before continuing
+
+**Mission 03: Telescope Search** (or adapted equivalent)
+- File finding with `<Space>ff` (or :find)
+- Content search with `<Space>fg` (or :grep)
 - Buffer navigation with `<Space>fb`
 - Help system with `<Space>fh`
-- Neo-tree file explorer basics
+- Neo-tree/netrw file explorer basics
 
-**Mission 02: Vim Motions**
+**Mission 04: Vim Motions**
 - Movement commands (w, b, e, gg, G, $, 0)
 - Editing operators (d, y, c, x)
 - Text objects (iw, i{, i")
 - The dot command (.) for repetition
 - Motion golf challenges for efficiency
 
-**Mission 03: Visual Mastery**
+**Mission 05: Visual Mastery**
 - Visual character mode (v)
 - Visual line mode (V)
 - Visual block mode (Ctrl+v)
 - Column editing techniques
 - Code refactoring with visual selections
 
-**Mission 04: Buffer Management**
+**Mission 06: Advanced Text Objects** (mini.ai)
+- Function text objects (af/if)
+- Argument text objects (aa/ia)
+- Next/last navigation (in/il)
+- User-prompted text objects (a?/i?)
+- Text Object Arena game
+
+**Mission 07: Buffer Management**
 - Buffer vs window vs tab concepts
 - Buffer navigation (:bn, :bp, :b{n})
 - Window splits (:split, :vsplit)
 - Split navigation (Ctrl+w + hjkl)
 - Multi-file code tracing exercise
 
-**Mission 05: Tmux Workflows**
-- Session management (create, detach, attach)
-- Window management (create, switch, kill)
-- Pane operations (split, navigate, resize, zoom)
-- Multi-project monitoring setup
-- Clipboard integration between panes
+**Mission 08: LSP Investigation** (or adapted equivalent)
+- Language Server Protocol features
+- Go-to-definition, find-references
+- Code actions and refactoring
+- Diagnostics and error navigation
+- OR: ctags-based navigation if no LSP
 
 ### 3. Final Challenge
 Timed escape room scenario requiring:
