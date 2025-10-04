@@ -55,13 +55,40 @@
 **Outcome**: User can use LSP features for navigation
 **Adaptation**: If no LSP, AI teaches ctags and manual navigation
 
+### Mission 09: Git Workflow Mastery 🆕
+**Path**: `missions/09-git-workflow-mastery/`
+**Purpose**: Version control integration with mini.diff
+**Prerequisites**: Mission 02 complete (mini.diff detected)
+**Outcome**: User masters hunk navigation, selective staging, git blame
+**Special**: Custom mission created for users with mini.diff installed
+**Skills**: `]h`/`[h` navigation, `git add -p`, blame investigation, atomic commits
+
+### Mission 10: AI Pair Programming 🆕
+**Path**: `missions/10-ai-pair-programming/`
+**Purpose**: GitHub Copilot integration and AI-assisted coding
+**Prerequisites**: Mission 02 complete (copilot.lua detected)
+**Outcome**: User leverages AI suggestions while maintaining critical judgment
+**Special**: Custom mission created for users with Copilot installed
+**Skills**: Inline suggestions, alternatives cycling, critical review, boilerplate generation
+
+### Mission 11: Code Formatting & Linting 🆕
+**Path**: `missions/11-code-formatting-linting/`
+**Purpose**: Automated code quality with conform.nvim
+**Prerequisites**: Mission 02 complete (conform.nvim detected)
+**Outcome**: User achieves zero-overhead formatting automation
+**Special**: Custom mission created for users with conform.nvim installed
+**Skills**: Format-on-save, multi-language formatting, formatter troubleshooting
+
 ---
 
 ## Key Changes Summary
 
 ### Added Missions
 1. **Mission 02: Arsenal Diagnostics** - Interactive setup verification
-2. **Mission 07: Advanced Text Objects** - mini.ai plugin with game-based learning
+2. **Mission 06: Advanced Text Objects** - mini.ai plugin with game-based learning
+3. **Mission 09: Git Workflow Mastery** - mini.diff integration (custom)
+4. **Mission 10: AI Pair Programming** - Copilot integration (custom)
+5. **Mission 11: Code Formatting & Linting** - conform.nvim automation (custom)
 
 ### Renumbered Missions
 - Old Mission 02 (Telescope) → Mission 03
@@ -222,5 +249,6 @@ When adding new missions:
 ---
 
 **Last Updated**: 2025-10-04
-**Current Mission Count**: 8 (+ Final Challenge)
+**Current Mission Count**: 11 (8 standard + 3 custom, + Final Challenge)
 **Total Tutorial Tokens**: 15 (unchanged)
+**Custom Missions**: Missions 09-11 are toolkit-specific, created during Mission 02 diagnostics

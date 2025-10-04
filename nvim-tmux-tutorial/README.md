@@ -23,6 +23,8 @@ Detective, you've been brought onto this cold case. Dr. Elena Vimsworth—known 
 
 **Your mission:** Master her investigative tools and uncover what happened.
 
+**Note:** This investigation adapts to you. Every detective has different equipment and expertise. Your AI partner will assess your capabilities and create a personalized mission path—sometimes even generating custom missions on the fly to match your unique setup.
+
 ## 📖 NAVIGATING THIS FILE (Your First Lesson)
 
 You're reading this in **Neovim**—Dr. Vimsworth's editor of choice. Here are the essential commands to navigate this case file:
@@ -118,12 +120,13 @@ Date:   Tue Mar 15 23:47:33 2022 -0700
 
 ## INVESTIGATION GUIDELINES
 
-1. **Missions are modular** - Tackle them in any order that suits your investigation
-2. **Add missions as needed** - Your AI partner can create custom missions for specific skills
-3. **Remove missions** - Skip what you already know
-4. **Practice between missions** - Use `sandbox/` for training
-5. **Document discoveries** - Track tokens and patterns
-6. **Master the techniques** - Dr. Vimsworth's methods are the key
+1. **Master the Foundation** - Start with Mission 01 (tmux) and Mission 02 (setup verification)
+2. **Practice Deliberately** - Use `sandbox/` to drill techniques between missions
+3. **Track Your Evidence** - Monitor progress in `achievements/progress.md`
+
+## THE INVESTIGATION PATH
+
+This investigation adapts to you. Mission 02 assesses your toolkit and may recommend additional training tailored to your setup. Your AI partner guides you through the case, adjusting difficulty and creating challenges as needed.
 
 ## CASE STATUS TRACKING
 
@@ -145,6 +148,8 @@ Some questions to consider:
 - What does "Project Prometheus" actually mean?
 
 Every command you master brings you closer to answers. But be warned: the truth may be more complex than you expect.
+
+**Your investigation path is unique.** No two detectives follow the same trail—your skills, tools, and choices shape the missions you'll encounter.
 
 **The investigation starts now.**
 
