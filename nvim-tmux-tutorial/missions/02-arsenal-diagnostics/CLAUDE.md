@@ -53,9 +53,15 @@ Then proceed with interactive verification:
 ```
 "Excellent, Detective. Let's assess your toolkit systematically.
 
-We'll examine 10 components of a Neovim setup. For each one, you'll decide:
+We'll examine 12 components of a Neovim setup. For each one, you'll decide:
 - Install/fix it (I'll guide you)
 - OR adapt the tutorial to work without it
+
+**REFERENCE**: For detailed component explanations (what they do, why you need them, options, commands), refer users to:
+→ `component-guide.md` in this mission directory
+
+Use that guide when users ask "What is [component]?" or "Why do I need this?"
+This CLAUDE.md file focuses on the interactive diagnostic workflow only.
 
 Let me first check what plugins you have installed...
 
@@ -623,6 +629,56 @@ templates (like 'for' → full for-loop)?
 Snippets are a nice-to-have. We can add later. Not required."
 ```
 
+**Debugger (DAP - Debug Adapter Protocol)**:
+```
+"Do you have debugging capabilities in Neovim? Can you set breakpoints
+and step through code?
+
+[If yes: nvim-dap installed, note which adapters]
+[If no: no debugger setup]
+
+Options:
+OPTION A: Install nvim-dap (recommended for serious development)
+- Set breakpoints, step through code, inspect variables
+- Supports multiple languages (Python, JS, Go, Rust, etc.)
+- Takes ~10-15 minutes to set up
+- I'll guide you through it
+
+OPTION B: Use external debugger
+- Keep using VS Code, browser DevTools, or IDE debugger
+- Use Neovim for editing, external tools for debugging
+- Simpler setup
+
+OPTION C: Skip for now
+- Use print/console.log debugging
+- Can add later if needed
+
+What's your preference?"
+```
+
+**Test Runner Integration**:
+```
+"How do you currently run tests?
+
+[If integrated: neotest or vim-test installed]
+[If terminal: manual commands in terminal]
+[If none: no testing workflow]
+
+Options:
+OPTION A: Install neotest (recommended)
+- Run tests inline, see results in Neovim
+- Jump to failing tests instantly
+- Support for most frameworks (Jest, pytest, Go test, etc.)
+- I'll set it up
+
+OPTION B: Use terminal workflow
+- Run tests manually with npm test, pytest, etc.
+- See results in terminal pane
+- Simpler, works for everyone
+
+What's your preference?"
+```
+
 ## Building the User Profile
 
 As you go through diagnostics, build a mental profile:
@@ -640,6 +696,8 @@ USER PROFILE: [Username]
 ❌ Git Integration: None
 ❌ Formatter: Manual formatting only
 ❌ Snippets: None
+❌ Debugger: None (using external tools)
+❌ Test Runner: Terminal workflow
 
 ADAPTATION NOTES:
 - Telescope fully functional, use as-is in missions
@@ -653,92 +711,6 @@ Store this mentally to reference in ALL future missions.
 ## Mission Reordering Based on Setup
 
 **CRITICAL NEW FEATURE**: After diagnostics, you must **reorder remaining missions** based on what the user has installed.
-
-### Reordering Rules
-
-**If they have ALL core plugins** (Telescope, LSP, mini.ai):
-```
-Standard order:
-Mission 03: Telescope Search
-Mission 04: Vim Motions
-Mission 05: Visual Mastery
-Mission 06: Text Objects (mini.ai)
-Mission 07: Buffer Management
-Mission 08: LSP Investigation
-```
-
-**If they have NO Telescope** (using :find only):
-```
-Skip Mission 03 entirely, or move it to end as optional
-Reorder to:
-Mission 03: Vim Motions (immediate editing skills)
-Mission 04: Visual Mastery
-Mission 05: Text Objects (if mini.ai present)
-Mission 06: Buffer Management
-Mission 07: LSP Investigation (if LSP present)
-Mission 08: File Navigation Basics (adapted telescope mission)
-```
-
-**If they have NO LSP**:
-```
-Skip or move Mission 08 to end as optional
-Focus on core editing skills:
-Mission 03: Telescope Search (if present)
-Mission 04: Vim Motions
-Mission 05: Visual Mastery
-Mission 06: Text Objects (if mini.ai present)
-Mission 07: Buffer Management
-```
-
-**If they have NO mini.ai**:
-```
-Skip Mission 06 or replace with standard text objects
-Reorder to:
-Mission 03: Telescope Search
-Mission 04: Vim Motions
-Mission 05: Visual Mastery
-Mission 06: Buffer Management (moved up)
-Mission 07: LSP Investigation (if LSP present)
-```
-
-**If they're MINIMALIST** (no plugins at all):
-```
-Completely reorder to focus on core vim:
-Mission 03: Vim Motions (core editing)
-Mission 04: Visual Mastery (core editing)
-Mission 05: Buffer Management (core navigation)
-Mission 06: File Navigation (:find/:grep)
-Mission 07: Manual Navigation (ctags, marks)
-```
-
-### How to Present the Reordered Path
-
-After diagnostics complete, tell user:
-
-```
-"Based on your setup, I've customized your investigation path:
-
-Your recommended mission order:
-✅ Mission 01: Tmux Workflows (complete)
-✅ Mission 02: Arsenal Diagnostics (complete)
-➡️  Mission 03: [Next Mission Title]
-    Mission 04: [Following Mission]
-    Mission 05: [Following Mission]
-    ...
-
-[Explain why this order makes sense for their setup]
-
-For example:
-'Since you have Telescope installed, we'll start with fast file finding.
-You'll learn search techniques before diving into motion commands.'
-
-OR:
-
-'Since you're working without LSP, we'll focus on core Vim editing skills.
-You'll master motions and visual mode before navigation techniques.'
-
-Ready to begin Mission 03: [Title]?"
-```
 
 ### Mission Priority Matrix
 
@@ -759,7 +731,7 @@ Ready to begin Mission 03: [Title]?"
 - If LSP missing: Create adapted "Code Navigation" mission using ctags
 - If mini.ai missing: Teach standard vim text objects in Mission 04/05
 
-### Example Reordering Scenarios
+### Reordering Scenarios
 
 **Scenario 1: Full Setup User**
 ```
@@ -1168,6 +1140,7 @@ Ready to begin Mission 03: [Next Mission Title]?"
 - **harpoon**: Create "Rapid Navigation" mission
 - **leap.nvim or hop.nvim**: Create "Advanced Motion" mission
 - **nvim-dap**: Create "Debugging Mastery" mission
+- **neotest or vim-test**: Create "Test Runner Mastery" mission
 - **trouble.nvim**: Create "Diagnostics Dashboard" mission
 - **which-key**: Create "Keybinding Discovery" mission
 - **Comment.nvim**: Create "Code Documentation" mission

@@ -106,6 +106,16 @@ Expand abbreviations into code templates.
 - **Options**: LuaSnip, UltiSnips, or none
 - **Why**: Fast boilerplate generation
 
+### 11. Debugger (DAP)
+Set breakpoints and step through code.
+- **Options**: nvim-dap, external debugger, or print debugging
+- **Why**: Professional debugging workflow inside editor
+
+### 12. Test Runner
+Run and view test results inline.
+- **Options**: neotest, vim-test, or terminal workflow
+- **Why**: Fast feedback loop for test-driven development
+
 ## 🚀 How This Mission Works
 
 **This is NOT a reading mission. This is a CONVERSATION mission.**

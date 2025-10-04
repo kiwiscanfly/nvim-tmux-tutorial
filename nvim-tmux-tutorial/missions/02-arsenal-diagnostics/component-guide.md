@@ -621,8 +621,13 @@ Plugin Manager (required for everything below)
 │   └── Independent
 ├── Formatter (null-ls/none-ls)
 │   └── Integrates with: LSP
-└── Snippet Engine (LuaSnip)
-    └── Integrates with: Completion Engine
+├── Snippet Engine (LuaSnip)
+│   └── Integrates with: Completion Engine
+├── Debugger (nvim-dap)
+│   ├── Works with: LSP for language support
+│   └── UI: nvim-dap-ui, nvim-dap-virtual-text
+└── Test Runner (neotest)
+    └── Works with: Treesitter for test detection
 ```
 
 ---
@@ -641,6 +646,8 @@ Plugin Manager (required for everything below)
 ❌ Git: Command-line
 ❌ Formatter: Manual
 ❌ Snippets: None
+❌ Debugger: External
+❌ Test Runner: Terminal
 ```
 
 ### Professional Setup (Full IDE)
@@ -655,6 +662,8 @@ Plugin Manager (required for everything below)
 ✅ Git: gitsigns + fugitive
 ✅ Formatter: null-ls/none-ls
 ✅ Snippets: LuaSnip
+✅ Debugger: nvim-dap + nvim-dap-ui
+✅ Test Runner: neotest
 ```
 
 ### Minimalist Setup (No Plugins)
@@ -669,7 +678,148 @@ Plugin Manager (required for everything below)
 ❌ Git: Command-line
 ❌ Formatter: External commands
 ❌ Snippets: Abbreviations
+❌ Debugger: gdb/pdb in terminal
+❌ Test Runner: Terminal commands
 ```
+
+---
+
+## 11. Debugger (DAP)
+
+### What It Is
+Debug Adapter Protocol (DAP) integration that brings visual debugging capabilities into Neovim—set breakpoints, step through code, inspect variables, and view call stacks.
+
+### Why You Need It
+- **Interactive debugging**: Set breakpoints without print statements
+- **Step execution**: Step over/into/out of functions
+- **Variable inspection**: View and modify variable values in real-time
+- **Call stack navigation**: Trace execution flow
+- **Conditional breakpoints**: Break only when specific conditions are met
+- **Multi-language support**: Debug Python, JavaScript, Go, Rust, and more
+
+### Popular Options
+
+**nvim-dap** (Recommended - Standard)
+- Official DAP protocol implementation
+- Multi-language support via adapters
+- Integration with UI plugins (nvim-dap-ui)
+- Virtual text for inline variable display
+- REPL for interactive debugging
+- Active development
+
+**vimspector** (Alternative - GUI-focused)
+- Visual debugging interface
+- Pre-configured for common languages
+- Mouse support for breakpoints
+- Less Neovim-native
+
+**External Debuggers** (No Plugin)
+- Use gdb, pdb, node inspect in terminal
+- Simple but manual
+- No editor integration
+
+### What Commands Look Like
+
+```vim
+" nvim-dap
+:DapContinue         " Start/continue debugging
+:DapToggleBreakpoint " Set breakpoint at cursor
+:DapStepOver         " Step over function
+:DapStepInto         " Step into function
+:DapStepOut          " Step out of function
+:DapTerminate        " Stop debugging
+
+" Common keybindings
+<F5>            " Continue
+<F10>           " Step over
+<F11>           " Step into
+<F12>           " Step out
+<Space>b        " Toggle breakpoint
+<Space>dr       " Open REPL
+```
+
+### Language Adapters Examples
+- **Python**: debugpy
+- **JavaScript/TypeScript**: node-debug2, chrome-debug
+- **Go**: delve
+- **Rust**: lldb, codelldb
+- **C/C++**: lldb, gdb
+- **Java**: java-debug
+
+### UI Plugins
+- **nvim-dap-ui**: Beautiful debug UI with scopes, watches, stack
+- **nvim-dap-virtual-text**: Inline variable values
+- **telescope-dap.nvim**: Telescope integration for breakpoints/commands
+
+---
+
+## 12. Test Runner
+
+### What It Is
+A plugin that integrates test execution directly into Neovim, allowing you to run tests, view results inline, and jump to failures without leaving the editor.
+
+### Why You Need It
+- **Inline test execution**: Run tests without switching to terminal
+- **Visual feedback**: See pass/fail status next to test code
+- **Jump to failures**: Navigate directly to failing assertions
+- **Watch mode**: Auto-run tests on file changes
+- **Test discovery**: Automatic test detection
+- **Multi-framework support**: Works with pytest, jest, go test, etc.
+
+### Popular Options
+
+**neotest** (Recommended - Modern)
+- Framework-agnostic architecture
+- Beautiful UI with test tree
+- Inline diagnostics for failures
+- Output panel with test results
+- Watch mode support
+- Adapter system for different frameworks
+
+**vim-test** (Mature, Simple)
+- Runs tests in terminal/tmux
+- Simple keybindings
+- Many framework integrations
+- Less visual feedback
+- Lightweight
+
+**Terminal Workflow** (No Plugin)
+- Run tests in terminal pane
+- Manual execution and navigation
+- Always available
+- No editor integration
+
+### What Commands Look Like
+
+```vim
+" neotest
+:Neotest run           " Run nearest test
+:Neotest run file      " Run current file tests
+:Neotest summary       " Show test tree
+:Neotest output        " View test output
+:Neotest output-panel  " Toggle output panel
+
+" Common keybindings
+<Space>tn       " Run nearest test
+<Space>tf       " Run file tests
+<Space>ts       " Toggle summary
+<Space>to       " View output
+
+" vim-test
+:TestNearest    " Run nearest test
+:TestFile       " Run current file
+:TestSuite      " Run full suite
+:TestLast       " Re-run last test
+:TestVisit      " Jump to last test file
+```
+
+### Test Framework Adapters (neotest)
+- **Python**: neotest-python (pytest, unittest)
+- **JavaScript/TypeScript**: neotest-jest, neotest-vitest
+- **Go**: neotest-go
+- **Rust**: neotest-rust
+- **Ruby**: neotest-rspec
+- **Elixir**: neotest-elixir
 
 ---
 
@@ -694,6 +844,14 @@ Plugin Manager (required for everything below)
 
 " Check Treesitter
 :TSInstallInfo " Show parsers
+
+" Check debugger
+:DapContinue   " nvim-dap
+:VimspectorLaunch " vimspector
+
+" Check test runner
+:Neotest       " neotest
+:TestNearest   " vim-test
 
 " Check health overall
 :checkhealth   " Complete diagnostic
