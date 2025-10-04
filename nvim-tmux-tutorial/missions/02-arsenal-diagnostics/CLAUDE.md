@@ -1123,9 +1123,69 @@ OR:
 'Since you're running a minimal setup without plugins, we'll focus on core
 Vim skills first. You'll master editing and navigation using built-in features.'
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🆕 CUSTOM MISSIONS TO CREATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Based on your toolkit, I can create additional missions for:
+[List plugins/features that warrant custom missions]
+
+Example:
+- Mission 09: Git Workflow Mastery (mini.diff detected)
+- Mission 10: AI Pair Programming (copilot.lua detected)
+- Mission 11: Code Formatting & Linting (conform.nvim detected)
+
+Would you like me to create these missions now, or proceed
+with the standard path first?
+
 Mission 02: Complete ✅
 
 Ready to begin Mission 03: [Next Mission Title]?"
+```
+
+### CRITICAL: Identify Opportunities for Custom Missions
+
+**AFTER completing diagnostics, BEFORE presenting the mission path:**
+
+**Analyze the user's toolkit for plugins/features NOT covered in missions 01-08:**
+
+**Common candidates for custom missions:**
+- **mini.diff or gitsigns**: Create "Git Workflow Mastery" mission
+- **copilot.lua**: Create "AI Pair Programming" mission
+- **conform.nvim or null-ls**: Create "Code Formatting & Linting" mission
+- **harpoon**: Create "Rapid Navigation" mission
+- **leap.nvim or hop.nvim**: Create "Advanced Motion" mission
+- **nvim-dap**: Create "Debugging Mastery" mission
+- **trouble.nvim**: Create "Diagnostics Dashboard" mission
+- **which-key**: Create "Keybinding Discovery" mission
+- **Comment.nvim**: Create "Code Documentation" mission
+- **nvim-autopairs or mini.pairs**: Create "Bracket Automation" mission
+
+**Process:**
+1. Review installed plugins from `ls ~/.local/share/nvim/lazy/`
+2. Cross-reference against missions 01-08 coverage
+3. Identify 2-4 plugins that warrant dedicated missions
+4. **PROACTIVELY OFFER** to create these missions
+5. If user agrees, use mission template system to create them
+6. Add to their customized mission path
+
+**Don't wait for user to ask** - be proactive in identifying these opportunities.
+
+**Example dialogue:**
+```
+"Detective, I've analyzed your toolkit. You have several advanced
+plugins that aren't covered in the standard missions:
+
+- mini.diff (git integration)
+- copilot.lua (AI assistance)
+- conform.nvim (formatting)
+
+I can create custom missions for these. Would you like me to:
+A) Create these missions now (adds 20-40 min)
+B) Proceed with standard missions, add custom ones later
+C) Skip custom missions entirely
+
+What's your preference?"
 ```
 
 ## Critical AI Behaviors
