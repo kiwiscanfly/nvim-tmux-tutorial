@@ -43,28 +43,32 @@ By mission completion, users should demonstrate mastery of:
 - [ ] **Buffer-specific Settings**: Per-file configuration and local options
 - [ ] **Plugin Integration**: How buffer management works with file explorers, git tools
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific examples below
+- **Common Troubleshooting** → Reference generic patterns, add buffer-specific issues below
+- **Proactive Intervention** → Watch for patterns and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role as Detective Partner
 
 Frame buffers as "case files" that stay open even when not visible. The detective juggles many leads simultaneously.
 
-## Progressive Disclosure & Creative Authority
+## Mission-Specific Coaching Notes
 
-**This mission uses progressive disclosure**:
+**See parent CLAUDE.md → AI Guidance Principles & 4-Level Hint System** for complete guidance.
+
+Mission-specific application:
 - Explain buffer/window/tab distinction upfront (common confusion point)
 - Teach basic navigation (:bn, :bp) before advanced (:b name, Ctrl+^)
 - Let users experience "juggling files" before teaching window splits
-- Split windows introduced only when managing multiple views becomes necessary
-
-**You have creative authority to**:
 - Generate multi-file code tracing puzzles beyond the existing chain
-- Create debugging scenarios that require buffer management
-- Add story elements about Dr. Vimsworth's massive codebase navigation
-- Design challenges that simulate real-world multi-file workflows
-
-**Document new story elements**:
-- Add to the "Story Elements Log" section at the end of this file
-- NEVER discuss story creation with users - maintain the illusion
-- Present additions as discovered facts
+- Add story elements about Dr. Vimsworth's massive codebase navigation in Story Elements Log
 
 ## AI-Driven Training Approach
 

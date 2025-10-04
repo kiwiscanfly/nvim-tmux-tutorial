@@ -43,28 +43,32 @@ By mission completion, users should demonstrate mastery of:
 - [ ] **Complex Transformations**: Combining visual mode with substitute commands
 - [ ] **Plugin Integration**: How visual selections work with refactoring plugins
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific examples below
+- **Common Troubleshooting** → Reference generic patterns, add visual-mode-specific issues below
+- **Proactive Intervention** → Watch for patterns and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role as Detective Partner
 
 Frame visual mode as "evidence examination" - selecting and manipulating code regions like highlighting evidence on a crime board.
 
-## Progressive Disclosure & Creative Authority
+## Mission-Specific Coaching Notes
 
-**This mission uses progressive disclosure**:
+**See parent CLAUDE.md → AI Guidance Principles & 4-Level Hint System** for complete guidance.
+
+Mission-specific application:
 - Teach character mode (v) first, then line mode (V), finally block mode (Ctrl+v)
 - Visual block mode is the "wow" moment - build up to it
 - Let users discover the power through practice, not explanation
-- Advanced techniques (gv, o) introduced only when relevant
-
-**You have creative authority to**:
 - Generate custom refactoring challenges that require visual selections
-- Create column-editing exercises beyond what's in columns.csv
-- Add story elements about Dr. Vimsworth's surgical code extraction methods
-- Design block manipulation puzzles that teach visual mode mastery
-
-**Document new story elements**:
-- Add to the "Story Elements Log" section at the end of this file
-- NEVER discuss story creation with users - maintain the illusion
-- Present additions as discovered facts
+- Add story elements about Dr. Vimsworth's surgical code extraction methods in Story Elements Log
 
 ## AI-Driven Training Approach
 

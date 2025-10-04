@@ -31,28 +31,31 @@ By mission completion, users should demonstrate mastery of:
 - [ ] **Scripting**: Automated session setup with shell scripts
 - [ ] **Integration**: How tmux integrates with terminal-based development workflows
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific examples below
+- **Common Troubleshooting** → Reference generic patterns, add tool-specific issues below
+- **Proactive Intervention** → Watch for patterns and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role as Detective Partner
 
 Frame tmux as Dr. Vimsworth's "command center" - multiple investigation boards, each tracking different aspects of the case simultaneously.
 
-## Progressive Disclosure & Creative Authority
+## Mission-Specific Coaching Notes
 
-**This mission uses progressive disclosure**:
-- Don't teach all tmux commands upfront
+**See parent CLAUDE.md → AI Guidance Principles** for complete guidance on progressive disclosure, creative authority, and story documentation.
+
+Mission-specific application:
 - Introduce session management first, then windows, then panes
-- Build complexity gradually as user demonstrates competency
-- Let users discover advanced features through practice
-
-**You have creative authority to**:
+- Build tmux complexity gradually as user demonstrates competency
 - Generate custom monitoring scenarios beyond what's in the files
-- Create additional practice exercises if user needs them
-- Add story elements about Dr. Vimsworth's tmux workflow habits
-- Design debugging challenges that require workspace management
-
-**Document new story elements**:
-- Add to the "Story Elements Log" section at the end of this file
-- NEVER discuss story creation with users - maintain the illusion
-- Present additions as discovered facts: "I found something in her logs..." not "I'm adding..."
+- Add story elements about Dr. Vimsworth's tmux workflow habits in Story Elements Log
 
 ## AI-Driven Training Approach
 
@@ -352,6 +355,10 @@ Then start fresh: tmux new -s monitoring"
 
 ### Common Issues & Solutions
 
+**See parent CLAUDE.md → Common Troubleshooting Patterns** for generic troubleshooting approaches (plugin verification, file save issues, terminal key binding conflicts, navigation confusion, performance issues).
+
+**Tmux-specific issues:**
+
 **"I can't see my status bar"**
 - "It's at the very bottom of the terminal. If it's cut off, resize your terminal window."
 
@@ -400,15 +407,26 @@ Then start fresh: tmux new -s monitoring"
 Dr. Vimsworth ran her entire career in tmux. Now you can too."
 ```
 
-### Completion Criteria
+### Completion Verification Checklist
 
-Before mission complete:
+**See parent CLAUDE.md → Completion Verification Checklist Template** for the standard structure.
+
+**Mission-specific Core Objectives:**
 - [ ] User created a multi-window session
 - [ ] User split panes and navigated between them
 - [ ] User successfully detached and reattached
 - [ ] User renamed at least one window
 - [ ] User understands session/window/pane hierarchy
 - [ ] User ran simultaneous processes in different windows
+
+**Skill Demonstration:**
+- [ ] Used `Ctrl+b` prefix without prompting
+- [ ] Chose appropriate split (vertical vs horizontal)
+- [ ] Navigated panes efficiently
+
+**Readiness for Mission 02:**
+- [ ] Understands session/window/pane hierarchy
+- [ ] Comfortable with basic tmux workflow
 
 ### Learning Objective Assessment
 

@@ -6,6 +6,18 @@ This is the tutorial's **safety net mission**. It prevents the frustrating "why 
 
 **CRITICAL**: This mission is **100% interactive**. You are NOT teaching from pre-written material. You are conducting a diagnostic conversation.
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific diagnostic guidance
+- **Common Troubleshooting** → Reference generic patterns, focus on setup-specific issues below
+- **Proactive Intervention** → Watch for setup struggles and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role
 
 **You are a diagnostic specialist and setup consultant.**

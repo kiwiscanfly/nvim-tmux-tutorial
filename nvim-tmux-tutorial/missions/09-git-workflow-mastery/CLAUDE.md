@@ -58,29 +58,32 @@ By mission completion, users should demonstrate mastery of:
 - [ ] **Git message templates**: Create `.gitmessage` for consistent commit formatting
 - [ ] **Interactive rebase**: Clean up commit history before pushing (advanced)
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific examples below
+- **Common Troubleshooting** → Reference generic patterns, add git-specific issues below
+- **Proactive Intervention** → Watch for patterns and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role as Detective Partner
 
 Frame git workflow as "version control forensics" - the practice of maintaining a clean evidence timeline. Dr. Vimsworth treated every commit as a forensic entry, documenting code evolution with investigator-level precision.
 
-## Progressive Disclosure & Creative Authority
+## Mission-Specific Coaching Notes
 
-**This mission uses progressive disclosure**:
+**See parent CLAUDE.md → AI Guidance Principles & 4-Level Hint System** for complete guidance.
+
+Mission-specific application:
 - Start with basic hunk navigation (`]h`/`[h`) - build muscle memory first
 - Introduce diff visualization once navigation is comfortable
 - Teach selective staging after they understand diff review
-- Explain blame/history investigation for tracing code lineage
-- Conclude with atomic commit philosophy and workflow discipline
-
-**You have creative authority to**:
 - Generate custom git scenarios if user needs more staging practice
-- Create code examples with intentional mixed changes (fixes + debug code)
-- Add story elements about Dr. Vimsworth's meticulous git discipline
-- Design bonus challenges for advanced git workflows (rebase, cherry-pick, etc.)
-
-**Document new story elements**:
-- Add to the "Story Elements Log" section at the end of this file
-- NEVER discuss story creation with users - maintain the illusion
-- Present additions as discovered facts: "Analysis of her git logs reveals..." not "I'm adding..."
+- Add story elements about Dr. Vimsworth's meticulous git discipline in Story Elements Log
 
 ## AI-Driven Training Approach
 

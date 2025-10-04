@@ -41,9 +41,25 @@ Users learn automated code formatting with conform.nvim, practicing format-on-sa
 - [ ] **Consistency enforcement**: Machine ensures perfect uniformity
 - [ ] **Mental energy preservation**: Save brainpower for logic, not style
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific examples below
+- **Common Troubleshooting** → Reference generic patterns, add conform.nvim-specific issues below
+- **Proactive Intervention** → Watch for patterns and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role
 
 Frame formatting as "automated quality control" - Dr. Vimsworth's approach to eliminating style debates and manual formatting labor through machine enforcement.
+
+## Mission-Specific Coaching Notes
+
+**See parent CLAUDE.md → AI Guidance Principles & 4-Level Hint System** for complete guidance.
 
 ## Teaching Strategy
 

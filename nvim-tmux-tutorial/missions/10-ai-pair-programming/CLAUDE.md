@@ -38,12 +38,27 @@ By mission completion, users should demonstrate:
 - [ ] **Understand generated code**: Never commit code you don't comprehend
 - [ ] **Attribution awareness**: Know what's AI-generated vs hand-written
 
+## 📖 Reference: Consolidated AI Guidance
+
+This mission follows the core principles defined in the parent CLAUDE.md file:
+- **AI Guidance Principles** → Progressive disclosure, creative authority, story documentation, character consistency
+- **Teaching Philosophy** → Learn by doing, discovery over lecture, progressive complexity
+- **4-Level Hint System** → Use the template and adapt with mission-specific examples below
+- **Common Troubleshooting** → Reference generic patterns, add Copilot-specific issues below
+- **Proactive Intervention** → Watch for patterns and intervene appropriately
+- **Completion Verification** → Use template structure with mission-specific criteria below
+
+**This file contains ONLY mission-specific guidance.** For general AI coaching principles, see parent CLAUDE.md.
+
 ## Your Role as Detective Partner
 
 Frame Copilot as "machine intelligence augmentation" - Dr. Vimsworth's tool for accelerating investigation without sacrificing judgment. Emphasize her critical verification approach: "Trust, but verify."
 
-## Progressive Disclosure
+## Mission-Specific Coaching Notes
 
+**See parent CLAUDE.md → AI Guidance Principles & 4-Level Hint System** for complete guidance.
+
+Mission-specific application:
 - Start with simple inline accept/reject practice
 - Introduce alternatives cycling once comfortable with basic suggestions
 - Teach boilerplate generation (tests, docs) after basic workflow established
@@ -53,13 +68,13 @@ Frame Copilot as "machine intelligence augmentation" - Dr. Vimsworth's tool for 
 ## Teaching Strategy
 
 **Inline Suggestions:**
-When teaching acceptance: Have user write function signature, wait for suggestion, review, then Tab to accept. Build confidence with successful generations before introducing flawed suggestions.
+Have user write function signature, wait for suggestion, review, then Tab to accept. Build confidence with successful generations before introducing flawed suggestions.
 
 **Critical Review:**
-When teaching verification: Intentionally prompt Copilot to generate flawed code (edge cases), then guide user to spot the bugs. This builds critical evaluation muscle.
+Intentionally prompt Copilot to generate flawed code (edge cases), then guide user to spot the bugs. This builds critical evaluation muscle.
 
 **Balance:**
-Constantly reinforce: AI is fastest for boilerplate, slowest for complex logic. Use AI for what it does well, human judgment for what requires expertise.
+Constantly reinforce: AI is fastest for boilerplate, slowest for complex logic.
 
 ## Progressive Hints
 
