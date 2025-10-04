@@ -42,15 +42,15 @@ Before we can continue the investigation, **I need to verify YOUR forensic toolk
 
 ### What Makes This Special
 
-This isn't just a checklist. Based on what you have installed, **I'll reorganize the entire tutorial** to match your workflow:
+This isn't just a checklist. Based on what you have installed, **I'll identify which missions make sense for you**:
 
-- **Have Telescope?** We'll start with fast file finding
-- **No Telescope?** We'll focus on core Vim skills first
-- **Have LSP?** We'll include IDE-like features
+- **Have Telescope?** We'll create fast file-finding missions
+- **No Telescope?** We'll focus on core Vim skills missions
+- **Have LSP?** We'll add IDE-like feature missions
 - **No LSP?** We'll teach manual navigation techniques
-- **Minimalist setup?** We'll optimize for built-in Vim features
+- **Minimalist setup?** We'll optimize for built-in Vim feature missions
 
-**You get a custom investigation path**, not a one-size-fits-all tutorial.
+**Custom missions for your toolkit**, not a rigid sequence.
 
 ## 🛠️ Components We'll Examine
 
@@ -158,46 +158,47 @@ Mission complete when:
 
 ## 🗺️ What Happens After This Mission?
 
-You'll receive a **personalized investigation path** like this:
+You'll receive a **personalized mission recommendation** like this:
 
 ```
-DETECTIVE [YOUR NAME]'S INVESTIGATION PATH
+TOOLKIT ASSESSMENT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ Mission 01: Tmux Workflows (complete)
 ✅ Mission 02: Arsenal Diagnostics (complete)
 
-📋 YOUR CUSTOMIZED PATH:
-➡️  Mission 03: Telescope Search
-    Mission 04: Vim Motions
-    Mission 05: Visual Mastery
-    Mission 06: Text Objects
-    Mission 07: Buffer Management
-    Mission 08: LSP Investigation
+📋 RECOMMENDED MISSIONS FOR YOUR SETUP:
+✅ Mission 03: Telescope Search (you have Telescope)
+✅ Mission 04: Vim Motions (core skill)
+✅ Mission 05: Visual Mastery (core skill)
+✅ Mission 06: Text Objects (you have mini.ai)
+✅ Mission 07: Buffer Management (core skill)
+✅ Mission 08: LSP Investigation (you have LSP)
 
 OR (if minimal setup):
 
-➡️  Mission 03: Vim Motions
-    Mission 04: Visual Mastery
-    Mission 05: Buffer Management
+📋 RECOMMENDED MISSIONS:
+✅ Mission 04: Vim Motions (core skill)
+✅ Mission 05: Visual Mastery (core skill)
+✅ Mission 07: Buffer Management (core skill)
 
-🚫 SKIPPED: Mission 06 (no mini.ai), Mission 08 (no LSP)
-📝 ADAPTED: Mission 03 will use :find instead of Telescope
+🚫 NOT RECOMMENDED: Mission 03 (no Telescope), Mission 06 (no mini.ai), Mission 08 (no LSP)
+💡 ALTERNATIVELY: I can create adapted missions using :find instead of Telescope
 
 RATIONALE:
-Your setup focuses on core Vim skills. We'll master
-editing first, then add navigation techniques.
+Your setup focuses on core Vim skills. These missions
+match your toolkit. You can add/remove missions anytime.
 ```
 
-**The tutorial adapts to you**, not the other way around.
+**Missions adapt to you**, not the other way around.
 
 ## 🕵️ Detective's Note
 
 Dr. Vimsworth had her toolkit. You'll have yours. What matters isn't matching her setup exactly—it's having **tools that work for YOU**.
 
-The investigation continues once your arsenal is ready—and once I've mapped your custom path.
+The investigation continues once your arsenal is ready—and once I've identified which missions suit your toolkit.
 
 **Ready, Detective?**
 
 ---
 
-*After completing this mission, you'll receive your personalized mission order based on your setup.*
+*After completing this mission, I'll recommend missions that match your setup. You can accept, skip, or request custom missions.*

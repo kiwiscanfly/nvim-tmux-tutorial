@@ -75,40 +75,6 @@ cd missions/01-tmux-workflows
 nvim README.md
 ```
 
-## CASE FILES (MISSIONS)
-
-### 🖥️ Mission 01: Command Center
-**FIRST MISSION** - Establish your investigation headquarters
-**Objective:** Master workspace organization and persistence
-**Skills Required:** Session management, window/pane control, split views
-**Evidence Type:** Workspace architecture
-**Foundation:** All subsequent missions depend on this setup
-
-### 🔭 Mission 02: Scattered Fragments
-**Objective:** Locate 13 hidden tokens using search techniques
-**Skills Required:** File finding, pattern matching, grep
-**Evidence Type:** Digital breadcrumbs
-
-### ⚡ Mission 03: The Motions
-**Objective:** Decode editing patterns in corrupted files
-**Skills Required:** Efficient code navigation
-**Evidence Type:** Keystroke analysis
-
-### 👁️ Mission 04: Visual Selection
-**Objective:** Reconstruct data from fragmented sources
-**Skills Required:** Block editing, surgical refactoring
-**Evidence Type:** Visual patterns
-
-### 📚 Mission 05: The Buffer Puzzle
-**Objective:** Follow function calls across multiple files
-**Skills Required:** Multi-file navigation
-**Evidence Type:** Code trail
-
-### 🔬 Mission 06: The Language Server
-**Objective:** Analyze mysterious dotfiles modifications
-**Skills Required:** LSP configuration forensics
-**Evidence Type:** Configuration archaeology
-
 ## INVESTIGATIVE TOOLS
 
 ### Core Equipment
@@ -122,25 +88,6 @@ nvim README.md
 - Sessions: Persistent investigation environments
 - Windows: Parallel case tracking
 - Panes: Split-screen analysis
-
-### Quick Reference
-
-**Essential Neovim Commands:**
-```
-<Space>ff    Find files by name
-<Space>fg    Search file contents (grep)
-gd           Go to definition
-K            Show documentation
-```
-
-**Essential Tmux Commands:**
-```
-Ctrl+b %     Split pane vertically
-Ctrl+b c     Create new window
-Ctrl+b d     Detach (investigation continues)
-```
-
-*Full command reference available in each mission.*
 
 ## EVIDENCE CHAIN
 
@@ -171,11 +118,12 @@ Date:   Tue Mar 15 23:47:33 2022 -0700
 
 ## INVESTIGATION GUIDELINES
 
-1. **Follow the evidence trail** - Each mission leads to the next
-2. **Practice between missions** - Use `sandbox/` for training
-3. **Document discoveries** - Track tokens and patterns
-4. **Master the techniques** - Dr. Vimsworth's methods are the key
-5. **Trust the process** - Every clue has meaning
+1. **Missions are modular** - Tackle them in any order that suits your investigation
+2. **Add missions as needed** - Your AI partner can create custom missions for specific skills
+3. **Remove missions** - Skip what you already know
+4. **Practice between missions** - Use `sandbox/` for training
+5. **Document discoveries** - Track tokens and patterns
+6. **Master the techniques** - Dr. Vimsworth's methods are the key
 
 ## CASE STATUS TRACKING
 

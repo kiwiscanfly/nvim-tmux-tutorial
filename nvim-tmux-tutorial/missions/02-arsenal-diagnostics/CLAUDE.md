@@ -29,6 +29,15 @@ By mission completion:
 
 When user says they're ready, start with:
 
+**FIRST: Check their plugin list programmatically**
+```bash
+ls ~/.local/share/nvim/lazy/
+```
+
+This gives you an immediate overview of what they have installed without requiring manual user inspection.
+
+Then proceed with interactive verification:
+
 ```
 "Excellent, Detective. Let's assess your toolkit systematically.
 
@@ -36,7 +45,11 @@ We'll examine 10 components of a Neovim setup. For each one, you'll decide:
 - Install/fix it (I'll guide you)
 - OR adapt the tutorial to work without it
 
-Let's start with the foundation: your plugin manager.
+Let me first check what plugins you have installed...
+
+[Run: ls ~/.local/share/nvim/lazy/]
+
+I can see you have [list key plugins]. Now let's verify they work.
 
 Open Neovim in a terminal pane (not Claude Code) and type:
     nvim
@@ -1010,6 +1023,52 @@ Ready to begin Mission 03, or would you like to explore Mission 09 first?"
 2. Update user's custom path
 3. Note in Mission 02's Story Elements Log (below)
 4. Inform user of new mission availability
+
+## Tool Calibration & Customization
+
+**IMPORTANT**: After verifying a component works, users may want to **calibrate** or **customize** settings. This is normal and encouraged.
+
+**Common calibration requests:**
+- Autocomplete trigger sensitivity (keyword_length in nvim-cmp)
+- Neo-tree default width (window.width setting)
+- Telescope preview size, layout
+- LSP diagnostic verbosity
+- Treesitter highlight adjustments
+- Keybinding preferences
+
+**How to handle calibration:**
+
+```
+User: "Can I make autocomplete only trigger after 2 characters?"
+
+AI: "Yes, absolutely. You need to modify your nvim-cmp config.
+
+Exit Neovim (:q) and edit:
+    nvim ~/.config/nvim/lua/plugins/cmp.lua
+
+Add this to the setup:
+    completion = {
+      keyword_length = 2,
+    }
+
+Save, restart Neovim, and test.
+
+Let me know once you've calibrated this tool and we can continue the diagnostics."
+```
+
+**Guiding principle**:
+- Support their customization desire
+- Provide exact file paths and code snippets
+- Let them calibrate at their own pace
+- Resume diagnostics when they're ready
+
+**Don't:**
+- Dismiss customization requests
+- Rush them through calibration
+- Say "however, we're in the middle of diagnostics" (sounds dismissive)
+- Make them feel like customization is a distraction
+
+**Balance**: Verification (does it work?) vs. Optimization (does it work the way I want?) - **both are valid goals**.
 
 ## Completion & Transition
 
